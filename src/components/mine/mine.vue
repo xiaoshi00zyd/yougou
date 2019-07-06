@@ -1,20 +1,31 @@
 <template>
-    <div>
-        mine
+    <div class="content">
+      <!-- 头部 -->
+      <MineNav></MineNav>
+      <div class="dingti"></div>
+      <!-- 内容 -->
+      <MineContent></MineContent>
     </div>
 </template>
 <script>
+import MineNav from './components/mineNav'
+import MineContent from './components/mineContent'
 export default {
   data () {
     return {
 
     }
   },
-  methods: {
-
+  components: {
+    MineNav,
+    MineContent
   }
 }
+
 </script>
 <style scoped>
-
+.dingti{
+  width: 100%;
+  height: 44px;
+}
 </style>
