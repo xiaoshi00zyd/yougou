@@ -1,25 +1,26 @@
 <template>
   <div id="app">
     <bottomnav></bottomnav>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <script>
-import bottomnav from '@/common/bottomnav.vue'
+import bottomnav from "@/common/bottomnav.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
     bottomnav
   }
-}
+};
 </script>
 
 <style>
-  html,body{
-    height: 100%;
-  }
-  #app{
-    height: 100%;
-  }
+html,
+body {
+  height: 100%;
+}
+#app {
+  height: 100%;
+}
 </style>
