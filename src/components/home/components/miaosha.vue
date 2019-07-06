@@ -139,9 +139,6 @@ export default {
             padding: 5px;
             display: inline-block;
             vertical-align: top;
-            img {
-
-            }
             .content {
               font-size: 12px;
               height: 28px;

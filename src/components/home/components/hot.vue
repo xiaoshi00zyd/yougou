@@ -1,18 +1,18 @@
 <template>
     <div>
         <div v-for="(list,index) in Classification" :key="index">
-            <img :src="list.img" class="img_1">
+            <img v-lazy="list.img" class="img_1">
             <ul class="ul_1">
                 <li v-for="(img1, index) in list.up" :key="index">
                     <a href="">
-                        <img :src="img1">
+                        <img v-lazy="img1">
                     </a>
                 </li>
             </ul>
             <ul class="ul_2">
                 <li v-for="(img2, index) in list.down" :key="index">
                     <a href="">
-                        <img :src="img2">
+                        <img v-lazy="img2">
                     </a>
                 </li>
             </ul>

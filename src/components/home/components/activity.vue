@@ -1,10 +1,10 @@
 <template>
     <div>
         <div v-for="(activitylist,index) in activityList" :key="index">
-            <img :src="activitylist.img" class="img_1">
+            <img v-lazy="activitylist.img" class="img_1">
             <ul class="ul_1">
                 <li v-for="(activity,index) in activitylist.list" :key='index'>
-                    <img :src='activity'>
+                    <img v-lazy='activity'>
                 </li>
             </ul>
         </div>

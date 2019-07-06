@@ -1,21 +1,21 @@
 <template>
     <div class="big">
         <div v-for="(list,index) in ClassHomeSeckill" :key="index" class="box_1">
-            <img :src="list.seckill" class="img_1">
-            <img :src="list.leftImg" class="img_2">
+            <img v-lazy="list.seckill" class="img_1">
+            <img v-lazy="list.leftImg" class="img_2">
             <ul class="ul_1">
                 <li class="li_1">
                     <a href="" class="a_1">{{list.pone}}</a>
                     <a href="" class="a_2">{{list.ptwo}}</a>
                     <a href="" class="a_3">{{list.psh}}</a>
                     <a href="" class="a_4">{{list.pfp}}</a>
-                    <a href=""><img :src="list.dimg"></a>
+                    <a href=""><img v-lazy="list.dimg"></a>
                 </li>
                 <li class="li_2">
                     <a href="" class="a_2">{{list.pfi}}</a>
                     <a href="" class="a_3">{{list.pse}}</a>
                     <a href="" class="a_4">{{list.pfp}}</a>
-                    <a href=""><img :src="list.dtimg"></a>
+                    <a href=""><img v-lazy="list.dtimg"></a>
                 </li>
             </ul>
         </div>
