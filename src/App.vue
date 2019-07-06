@@ -1,23 +1,25 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <bottomnav></bottomnav>
     <router-view/>
   </div>
 </template>
 
 <script>
+import bottomnav from '@/common/bottomnav.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    bottomnav
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  html,body{
+    height: 100%;
+  }
+  #app{
+    height: 100%;
+  }
 </style>
