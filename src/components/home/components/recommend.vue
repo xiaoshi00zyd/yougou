@@ -71,7 +71,7 @@ export default {
                 background: #333333;
                 color: #e6e6e6;
                 border-radius: 15px;
-                font-size: 16px;
+                font-size: 14px;
                 img{
                     width: 12px;
                 }
