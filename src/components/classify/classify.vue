@@ -5,7 +5,7 @@
         <div class="boxOne"></div>
         <!-- 隐藏栏 -->
         <div v-show="control" class="boxS">
-          <Hide :m='control'></Hide>
+          <Hide :hide='control'></Hide>
         </div>
         <!-- 选项 -->
         <div class="box">
@@ -21,7 +21,8 @@
 
 <script>
 import Title from './components/title.vue'
-import Hide from './components/hide.vue'
+// import Hide from './components/hide.vue'
+import Hide from '@/public/hide'
 import ClassifyOne from './components/classifyone.vue'
 import OptionGroup from './components/optionGroup.vue'
 
