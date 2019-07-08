@@ -6,7 +6,7 @@
                 <p>{{item.title}}</p>
                 <li v-for="(itemo,indexo) in item.brand" :key="indexo">
                     <a href="">
-                        <img :src="itemo.bootImg" alt="">
+                        <img v-lazy="itemo.bootImg" alt="">
                         {{itemo.text}}
                     </a>
                 </li>
@@ -18,7 +18,7 @@
                 <p>{{item.title}}</p>
                 <li v-for="(itemo,indexo) in item.brand" :key="indexo">
                     <a href="">
-                        <img :src="itemo.womenShoesImg" alt="">
+                        <img v-lazy="itemo.womenShoesImg" alt="">
                         {{itemo.text}}
                     </a>
                 </li>
@@ -30,7 +30,7 @@
                 <p>{{item.title}}</p>
                 <li v-for="(itemo,indexo) in item.brand" :key="indexo">
                     <a href="">
-                        <img :src="itemo.manShoesImg" alt="">
+                        <img v-lazy="itemo.manShoesImg" alt="">
                         {{itemo.text}}
                     </a>
                 </li>
@@ -42,7 +42,7 @@
                 <p>{{item.title}}</p>
                 <li v-for="(itemo,indexo) in item.brand" :key="indexo">
                     <a href="">
-                        <img :src="itemo.soprtImg" alt="">
+                        <img v-lazy="itemo.soprtImg" alt="">
                         {{itemo.text}}
                     </a>
                 </li>
@@ -54,7 +54,7 @@
                 <p>{{item.title}}</p>
                 <li v-for="(itemo,indexo) in item.brand" :key="indexo">
                     <a href="">
-                        <img :src="itemo.soprtImg" alt="">
+                        <img v-lazy="itemo.soprtImg" alt="">
                         {{itemo.text}}
                     </a>
                 </li>

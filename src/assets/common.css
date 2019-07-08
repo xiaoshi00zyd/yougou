@@ -44,3 +44,19 @@
   .icon-faxian::after {
     content: "\e63d";
   }
+  /* 睁眼 */
+  .icon-zhengyan::after {
+    content: "\e610";
+  }
+  /* 对勾 */
+  .icon-duigou::after {
+    content: "\e602";
+  }
+  /* 闭眼 */
+  .icon-biyan::after {
+    content: "\e64c";
+  }
+  /* 清空 */
+  .icon-qingkong::after {
+    content: "\e68d";
+  }

@@ -18,6 +18,8 @@
         <top></top>
         <!-- 为你推荐 -->
         <recommend></recommend>
+        <!-- 底部 -->
+        <homefoot></homefoot>
     </div>
 </template>
 <script>
@@ -30,6 +32,7 @@ import activity from './components/activity'
 import brand from './components/brand'
 import top from './components/top'
 import recommend from './components/recommend'
+import homefoot from './components/homefoot'
 export default {
   data () {
     return {
@@ -51,7 +54,8 @@ export default {
     activity,
     brand,
     top,
-    recommend
+    recommend,
+    homefoot
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="search" ref='box_1'>
+        <div class="search_2" ref='box_1'>
             <img class="img1" src="../imgs/logo.png" alt="">
             <div>
                 <img src="../imgs/search.png" alt="">
@@ -19,16 +19,16 @@ export default {
   mounted () {
     $(window).scroll(() => {
       if ($(document).scrollTop() > 100) {
-        $('.search').css('background', 'linear-gradient(0deg, rgba(238,0,0,0.5), red 60%)')
+        $('.search_2').css('background', 'linear-gradient(0deg, rgba(238,0,0,0.5), red 60%)')
       } else {
-        $('.search').css('background', 'linear-gradient(0deg, rgba(255,255,255,0.3), #000 60%)')
+        $('.search_2').css('background', 'linear-gradient(0deg, rgba(255,255,255,0.3), #000 60%)')
       }
     })
   }
 }
 </script>
 <style scoped>
-.search {
+.search_2 {
     background: linear-gradient(0deg, rgba(255,255,255,0.3), #000 60%);
     height: 44px;
     width: 100%;
@@ -43,12 +43,12 @@ export default {
     z-index: 999;
     border-bottom: none;
 }
-.search .img1 {
+.search_2 .img1 {
     width: 50px;
     height: 30px;
 }
 
-.search div  {
+.search_2 div  {
     flex:1;
     background: #fff;
     height: 32px;
@@ -58,12 +58,12 @@ export default {
     margin: 0 8px;
 }
 
-.search div img {
+.search_2 div img {
     width: 16px;
     margin-left: 12px;
 }
 
-.search div input {
+.search_2 div input {
     border: none;
     margin-left: 10px;
     flex:1;
@@ -72,7 +72,7 @@ export default {
     font-size: 14px;
 }
 
-.search .img2 {
+.search_2 .img2 {
     width: 15px;
     height: 15px;
     margin-left: 2px;
