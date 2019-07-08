@@ -33,3 +33,32 @@ export function getActivity () {
 export function getHomeBaner () {
   return axios.get('HomeBaner')
 }
+
+// 优购分类接口 全部品牌
+export function getOptionGroup () {
+  return axios.get('http://192.168.11.99:3000/api/Allboot')
+}
+// 优购分类接口 女鞋
+export function getWomanShoe () {
+  return axios.get('http://192.168.11.99:3000/api/womenShoes')
+}
+// 优购分类接口 男鞋
+export function getManShoe () {
+  return axios.get('http://192.168.11.99:3000/api/manShoes')
+}
+// 优购分类接口 运动
+export function getSoprt () {
+  return axios.get('http://192.168.11.99:3000/api/soprt')
+}
+// 优购分类接口 户外
+export function getOutdoor () {
+  return axios.get('http://192.168.11.99:3000/api/outdoor')
+}
+// 优购分类接口 童装
+export function getChild () {
+  return axios.get('http://192.168.11.99:3000/api/child')
+}
+// 发现接口
+export function getDiscover () {
+  return axios.get('discover')
+}

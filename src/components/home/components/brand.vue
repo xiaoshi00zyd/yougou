@@ -77,6 +77,10 @@ export default {
               text-decoration: line-through;
               margin-left: 20px;
             }
+            a:hover{
+              text-decoration: none;
+              cursor: pointer;
+            }
           }
         }
     .pic_1{
