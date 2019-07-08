@@ -1,6 +1,6 @@
 <template>
     <div class="search">
-        <img class="img1" src="../imgs/leftarrow.png" alt="">
+        <img class="img1" src="../imgs/leftarrow.png" alt="" @click="$router.back(-1)">
         <div>
             <img src="../imgs/search.png" alt="">
             <input type="text" placeholder="搜索商品/店铺/种类">
