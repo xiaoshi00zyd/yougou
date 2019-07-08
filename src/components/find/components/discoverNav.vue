@@ -1,7 +1,7 @@
 <template>
     <!-- 顶部 -->
     <div class="search1">
-        <img class="img1" src="../imgs/back.png" alt="" @click="$router.back(-1)">
+        <img class="img1" src="../imgs/back.png" alt="" @click="goback">
           <div>
             <h2 class="title">发现</h2>
             <a href="#/mine">登录</a>
@@ -21,9 +21,9 @@ export default {
   },
   methods: {
     // 返回首页的函数
-    // goback () {
-    //   this.$router.push('/home')
-    // },
+    goback () {
+      this.$router.push('/home')
+    },
     change () {
       this.$emit('more')
     }
