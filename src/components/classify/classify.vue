@@ -10,7 +10,7 @@
         <!-- 选项 -->
         <div class="box">
           <div class="box1">
-              <Classify @hideOne='one'></Classify>
+              <ClassifyOne @hideOne='one'></ClassifyOne>
           </div>
           <div class="boxTwo"></div>
         <!-- 选项显示页 -->
@@ -22,7 +22,7 @@
 <script>
 import Title from './components/title.vue'
 import Hide from './components/hide.vue'
-import Classify from './components/classify.vue'
+import ClassifyOne from './components/classifyone.vue'
 import OptionGroup from './components/optionGroup.vue'
 
 export default {
@@ -46,7 +46,7 @@ export default {
   components: {
     Title,
     Hide,
-    Classify,
+    ClassifyOne,
     OptionGroup
   }
 }
