@@ -17,7 +17,7 @@ export default {
         pagination: {
           el: '.swiper-pagination'
         },
-        loop: true,
+        loop: false,
         autoplay: {
           delay: 2000,
           stopOnLastSlide: false,
@@ -36,22 +36,6 @@ export default {
 }
 </script>
 <style>
-    /* .swiper-pagination{
-        display:flex;
-        justify-content:flex-end;
-        padding-right:10px;
-        box-sizing:border-box;
-    } */
-    /* .swiper-pagination-bullet{
-        border-radius:1px;
-        width:2px;
-        height:15px;
-        background:#666;
-        border:1px solid #666;
-        opacity:0.2;
-        transform:rotateZ(40deg);
-    } */
-
     .swiper-pagination-bullet-active{
         background:#fe0000;
         opacity:0.6;

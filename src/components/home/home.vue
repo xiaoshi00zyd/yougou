@@ -14,6 +14,10 @@
         <activity></activity>
         <!-- 品牌专区 -->
         <brand></brand>
+        <!-- 回到顶部 -->
+        <top></top>
+        <!-- 为你推荐 -->
+        <recommend></recommend>
     </div>
 </template>
 <script>
@@ -24,6 +28,8 @@ import hot from './components/hot'
 import seckill from './components/seckill'
 import activity from './components/activity'
 import brand from './components/brand'
+import top from './components/top'
+import recommend from './components/recommend'
 export default {
   data () {
     return {
@@ -43,7 +49,9 @@ export default {
     hot,
     seckill,
     activity,
-    brand
+    brand,
+    top,
+    recommend
   }
 }
 </script>
