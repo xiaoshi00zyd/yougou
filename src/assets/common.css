@@ -1,0 +1,46 @@
+/* 定义字体家族 */
+@font-face {
+    font-family: "iconfont";
+    src: url('../fonts/iconfont.eot') format('embedded-opentype'),
+         url("../fonts/iconfont.svg") format("svg"),
+         url("../fonts/iconfont.ttf") format('truetype'),
+         url("../fonts/iconfont.woff") format('woff')
+}
+
+[class^="iconfont"],[class*=" iconfont"] {
+    font-family: 'iconfont';
+    font-style: normal;
+    font-size: 14px;
+}
+
+.icon-shouye::after {
+    content: "\e651";
+  }
+  
+  .icon-leimupinleifenleileibie::after {
+    content: "\e7f9";
+  }
+  
+  .icon-baobao::after {
+    content: "\e647";
+  }
+  
+  .icon-gouwuche::after {
+    content: "\e61b";
+  }
+  
+  .icon-wode::after {
+    content: "\e615";
+  }
+
+  .icon-liebiao::after {
+    content: "\e640";
+  }
+
+  .icon-dangdangdushu::after {
+    content: "\e973";
+  }
+
+  .icon-faxian::after {
+    content: "\e63d";
+  }
