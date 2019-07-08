@@ -58,3 +58,7 @@ export function getOutdoor () {
 export function getChild () {
   return axios.get('http://192.168.11.99:3000/api/child')
 }
+// 发现接口
+export function getDiscover () {
+  return axios.get('discover')
+}
