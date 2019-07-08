@@ -15,12 +15,12 @@
         <div>
           <input class="inp1" type="text" placeholder="手机号" v-model="phone"   @focus="show(true)" @blur="find(false)"
          >
-          <!-- <i class="iconfont icon-qingkong mark" ref="phonenum" v-show="phoneisShow" @click="clearphone($event)"></i> -->
+          <i class="iconfont icon-qingkong mark" ref="phonenum" v-show="phoneisShow" @click="clearphone($event)"></i>
           <i  class="Verification">获取验证码</i>
         </div>
         <div>
           <input class="inp2" type="text" placeholder="请输入验证码" v-model="proving"  @focus="show(false,true)" @blur="find(false,false)">
-          <i class="iconfont icon-qingkong verifimark" v-show="checking" @click="clearproving($event)"></i>
+          <i class="iconfont icon-qingkong verifimark" v-show="checking" @click="clear($event,proving)"></i>
         </div>
       </div>
     </div>
