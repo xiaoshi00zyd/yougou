@@ -1,5 +1,5 @@
 <template>
-    <div class="box" v-show="m" >
+    <div class="box" v-show="hide" >
         <ul>
             <li><a class="item1" href="">首页</a></li>
             <li><a class="item2" href="">分类</a></li>
@@ -11,10 +11,9 @@
 
 <script>
 export default {
-  props: ['m'],
+  props: ['hide'],
   data () {
     return {
-      hide: true
     }
   },
   computed: {
@@ -43,7 +42,6 @@ export default {
         width:100%;
         height: 49px;
         background: #666;
-        position: fixed;
     }
     .box ul{
         display: flex;
