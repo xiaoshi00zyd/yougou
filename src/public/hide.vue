@@ -1,10 +1,10 @@
 <template>
     <div class="box" v-show="hide" >
         <ul>
-            <li><a class="item1" href="">首页</a></li>
-            <li><a class="item2" href="">分类</a></li>
-            <li><a class="item3" href="">购物车</a></li>
-            <li><a class="item4" href="">我的优购</a></li>
+            <router-link to="/home" tag="li"><a class="item1" href="">首页</a></router-link>
+            <router-link to="/classify" tag="li"><a class="item2" href="">分类</a></router-link>
+            <router-link to="/shop" tag="li"><a class="item3" href="">购物车</a></router-link>
+            <router-link to="/mine" tag="li"><a class="item4" href="">我的优购</a></router-link>
         </ul>
     </div>
 </template>

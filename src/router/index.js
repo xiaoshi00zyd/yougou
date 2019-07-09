@@ -5,6 +5,7 @@ import classify from '@/components/classify/classify'
 import find from '@/components/find/find'
 import shop from '@/components/shop/shop'
 import mine from '@/components/mine/mine'
+import classifyFoot from '../components/classify/components/classifyFoot.vue'
 
 Vue.use(Router)
 
@@ -13,6 +14,15 @@ export default new Router({
     {
       path: '/',
       redirect: '/home/recommendNew'
+    },
+    {
+      path: '/classifyFoot',
+      name: 'classifyFoot',
+      component: classifyFoot,
+      meta: {
+        cache: true,
+        title: '搜索'
+      }
     },
     {
       path: '/home',

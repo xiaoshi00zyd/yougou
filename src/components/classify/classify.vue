@@ -5,7 +5,7 @@
         <div class="boxOne"></div>
         <!-- 隐藏栏 -->
         <div v-show="control" class="boxS">
-          <Hide :hide='control'></Hide>
+          <Hide style="position: fixed" :hide='control'></Hide>
         </div>
         <!-- 选项 -->
         <div class="box">
