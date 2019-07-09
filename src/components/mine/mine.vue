@@ -24,11 +24,12 @@ export default {
 
 </script>
 <style scoped>
-/* .content{
+.content{
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-} */
+  overflow: hidden;
+}
 .dingti{
   width: 100%;
   height: 88px;

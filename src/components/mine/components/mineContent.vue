@@ -271,13 +271,13 @@ input::-webkit-input-placeholder{
 }
 .sign{
             width: 100%;
-            margin-top: 30px;
+            margin-top: 60px;
             padding: 0;
             background: #999;
             color: #fff;
-            height: 44px;
-            line-height: 30px;
-            font-size: 16px;
+            height: 88px;
+            line-height: 60px;
+            font-size: 32px;
             border: 0;
     }
     .SubmitBtn {
