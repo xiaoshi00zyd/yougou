@@ -2,7 +2,7 @@
     <div class="search">
         <img class="img1" src="../imgs/logo.png" alt="">
         <div>
-            <input type="text" placeholder="请输入关键字">
+            <router-link to="/classifyFoot" tag="div">请输入关键字</router-link>
             <img src="../imgs/search.png" alt="">
         </div>
         <img class="img2" src="../imgs/options.png" alt="" @click="changeHide">
@@ -58,9 +58,10 @@ export default {
         margin-right: 26px;
     }
 
-    .search div input {
+    .search div div {
         border: none;
         margin-left: 20px;
+        color: #757575;
         flex:1;
         height: 64px;
         background: transparent;
