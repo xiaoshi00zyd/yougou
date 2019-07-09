@@ -15,12 +15,12 @@
         <div>
           <input class="inp1" type="text" placeholder="手机号" v-model="phone"   @focus="show(true)" @blur="find(false)"
          >
-          <i class="iconfont icon-qingkong mark" ref="phonenum" v-show="phoneisShow" @click="clearphone($event)"></i>
+          <i class="iconfont icon-qingkong mark" ref="phonenum" v-show="phoneisShow" @mousedown="clearphone($event)"></i>
           <i  class="Verification">获取验证码</i>
         </div>
         <div>
           <input class="inp2" type="text" placeholder="请输入验证码" v-model="proving"  @focus="show(false,true)" @blur="find(false,false)">
-          <i class="iconfont icon-qingkong verifimark" v-show="checking" @click="clear($event,proving)"></i>
+          <i class="iconfont icon-qingkong verifimark" v-show="checking" @mousedown="clearproving($event)"></i>
         </div>
       </div>
     </div>
@@ -28,13 +28,16 @@
     <!-- 账号密码登录 -->
     <div class="AccountSign" v-show="accountshow">
         <input class="inp1" type="text" v-model="phonecontent" placeholder="手机号/邮箱" @focus="show(true)" @blur="find(false)">
-        <a href="javascript:void;" class="iconfont icon-qingkong  phoneaccount" v-show="phoneisShow" ></a>
+        <a href="javascript:void;" class="iconfont icon-qingkong  phoneaccount" v-show="phoneisShow" @touchstart="qingkong"></a>
         <input class="inp1" v-if="eye" type="password" placeholder="密码" v-model="content" @focus="show(false,true)" @blur="find(false,false)">
-        <a href="javascript:;" class="iconfont icon-qingkong verifimark account" v-show="checking" ></a>
-        <a href="javascript:;" v-if="eye" class="iconfont icon-biyan verifimark glasses"   @click="showPassword(false,true)"></a>
-        <a href="javascript:;" v-if="passshow" class="iconfont icon-zhengyan verifimark glasses" @click="showPassword(true,false)"></a>
+        <a href="javascript:;" class="iconfont icon-qingkong verifimark account" @touchstart="pasqingkong" v-show="checking" ></a>
+        <a href="javascript:;" v-if="eye" class="iconfont icon-biyan verifimark glasses"   @click="showPassword($event,false,true)"></a>
+        <a href="javascript:;" v-if="passshow" class="iconfont icon-zhengyan verifimark glasses" @click="showPassword($event,true,false)"></a>
         <input class="inp1" type="text" v-if="passshow" placeholder="密码" v-model="content" @focus="show(false,true)" @blur="find(false,false)">
     </div>
+    <!-- 按钮 -->
+      <button class="sign" v-show="phoneshow" :class="{SubmitBtn:changecolor}">登录</button>
+      <button class="sign" v-show="accountshow" :class="{SubmitBtn:psdcolor}">登录</button>
     <Sign :show="phoneshow" :find="accountshow"></Sign>
   </div>
 </template>
@@ -55,7 +58,21 @@ export default {
       phonecontent: '',
       phone: '',
       proving: '',
-      flag: 0
+      changecolor: false,
+      psdcolor: false
+    }
+  },
+  updated () {
+    // 对文本框的值进行判断如果为空 则颜色不变  如果两个其中一个为空 就不为FALSE
+    if (this.phone !== '' && this.proving !== '') {
+      this.changecolor = true
+    } else if (this.phone === '' || this.proving === '') {
+      this.changecolor = false
+    }
+    if (this.phonecontent !== '' && this.content !== '') {
+      this.psdcolor = true
+    } else if (this.phonecontent === '' || this.content === '') {
+      this.psdcolor = false
     }
   },
   methods: {
@@ -80,32 +97,36 @@ export default {
       this.checking = vul
     },
     find (arg1, vul) {
-      console.log('失去焦点')
-      console.log(this.flag)
-      if (this.flag === 1) {
-        this.flag = 0
-      }
+      // await setInterval(() => {
+      //   this.phoneisShow = arg1
+      //   this.checking = vul
+      // }, 250)
       this.phoneisShow = arg1
       this.checking = vul
     },
-    showPassword (c1, c2) {
+    showPassword (event, c1, c2) {
       this.eye = c1
       this.passshow = c2
       this.aaa = c1
+      event.target.previousElementSibling.focus()
     },
     clearphone (event) {
       console.log('奥德赛发发')
       this.phone = ''
       this.phoneisShow = true
-      // 聚焦
-      // console.log(event.target.previousElementSibling)
+      event.target.previousElementSibling.focus()
+    },
+    qingkong (event) {
+      this.phonecontent = ''
+      event.target.previousElementSibling.focus()
+    },
+    pasqingkong (event) {
+      this.content = ''
       event.target.previousElementSibling.focus()
     },
     clearproving (event) {
       this.proving = ''
       event.target.previousElementSibling.focus()
-      // 假如是1就是 点击事件，不应该出发失焦事件
-      this.flag = 1
     }
 
   },
@@ -248,4 +269,18 @@ input::-webkit-input-placeholder{
   position: absolute;
   top: 600px;
 }
+.sign{
+            width: 100%;
+            margin-top: 30px;
+            padding: 0;
+            background: #999;
+            color: #fff;
+            height: 44px;
+            line-height: 30px;
+            font-size: 16px;
+            border: 0;
+    }
+    .SubmitBtn {
+    background: #ff4664;
+    }
 </style>

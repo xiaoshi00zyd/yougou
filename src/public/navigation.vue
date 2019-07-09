@@ -22,9 +22,9 @@ export default {
   },
   methods: {
     // 返回首页的函数
-    // goback () {
-    //   this.$router.push('/home')
-    // },
+    goback () {
+      this.$router.push('/home')
+    },
     change () {
       this.$emit('more')
     }

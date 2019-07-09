@@ -1,7 +1,7 @@
 <template>
   <div class="my">
-      <button class="sign" v-show="show">登录</button>
-      <button class="sign" v-show="find">登录</button>
+      <!-- <button class="sign" v-show="show">登录</button> -->
+      <!-- <button class="sign" v-show="find">登录</button> -->
       <!-- <p > -->
           <div class="abcd">
               <span  class="fast" v-show="show">新会员限时惊喜 首次登录送百元礼包</span>
@@ -56,17 +56,6 @@ export default {
 </script>
 
 <style scoped >
-    .sign{
-            width: 100%;
-            margin-top: 60px;
-            padding: 0;
-            background: #999;
-            color: #fff;
-            height: 88px;
-            line-height: 60px;
-            font-size: 32px;
-            border: 0;
-    }
     .wjpassword{
         width: 100%;
         display: flex;
