@@ -6,6 +6,8 @@ import find from '@/components/find/find'
 import shop from '@/components/shop/shop'
 import mine from '@/components/mine/mine'
 import carouselRouter from './carouselRouter'
+// 分类下搜索框分支路由
+import classifyFoot from './classifyRouter'
 
 Vue.use(Router)
 
@@ -64,6 +66,7 @@ export default new Router({
       path: '*',
       redirect: '/home'
     },
-    ...carouselRouter
+    ...carouselRouter,
+    ...classifyFoot
   ]
 })

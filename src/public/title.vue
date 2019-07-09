@@ -1,11 +1,11 @@
 <template>
     <div class="search">
-        <img class="img1" src="../imgs/logo.png" alt="">
+        <img class="img1" src="./imgs/logo.png" alt="" @click="upOneLevel">
         <div>
             <router-link to="/classifyFoot" tag="div">请输入关键字</router-link>
-            <img src="../imgs/search.png" alt="">
+            <img src="./imgs/search.png" alt="">
         </div>
-        <img class="img2" src="../imgs/options.png" alt="" @click="changeHide">
+        <img class="img2" src="./imgs/optionso.png" alt="" @click="changeHide">
     </div>
 </template>
 
@@ -14,6 +14,9 @@ export default {
   methods: {
     changeHide () {
       this.$emit('more')
+    },
+    upOneLevel () {
+      this.$router.go(-1)
     }
   }
 }

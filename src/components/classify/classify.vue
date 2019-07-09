@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import Title from './components/title.vue'
+import Title from '../../public/title.vue'
 // import Hide from './components/hide.vue'
 import Hide from '@/public/hide'
 import ClassifyOne from './components/classifyone.vue'
