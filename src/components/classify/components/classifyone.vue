@@ -51,8 +51,9 @@ export default {
 
 <style scoped lang="less">
   .box {
-    width: 180px;
+    width: 100%;
     ul {
+      width: 100%;
       display: flex;
       flex-wrap: wrap;
       li {
@@ -65,6 +66,7 @@ export default {
         color:#666;
       }
       .picth {
+        width: 100%;
         background-color: #eee;
         border-right: 2px solid #eee;
         color: #ff0000;

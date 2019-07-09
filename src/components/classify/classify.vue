@@ -60,19 +60,21 @@ export default {
   }
   .box {
     width: 100%;
-    max-width: 1600px;
+    /* max-width: 1600px; */
     margin: 0 auto;
     display: flex;
   }
   .box1 {
-    flex: 0.25;
+    width: 25%;
+    /* flex: 0.25; */
     position: fixed;
   }
   .boxTwo {
-    flex: 0.25;
+    width: 25%;
   }
   .box2 {
-    flex: 0.75;
+    /* flex: 0.75; */
+    width: 75%;
   }
   .boxS{
      width:100%;
