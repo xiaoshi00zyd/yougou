@@ -1,5 +1,5 @@
 <template>
-    <div class="nav">
+    <div class="nav" v-if="isShow">
         <ul>
         <router-link to="/home" tag="li">
         <i class="iconfont icon-shouye"></i>
@@ -28,24 +28,31 @@
 export default {
   data () {
     return {
-
+      isShow: true
     }
+  },
+  methods: {
+    getHash () {
+      let H = window.location.hash
+      if (H !== '#/home' && H !== '#/classify' && H !== '#/find' && H !== '#/shop' && H !== '#/mine') {
+        this.isShow = false
+      } else {
+        this.isShow = true
+      }
+    }
+  },
+  watch: {
+    '$route': 'getHash'
   }
 }
 </script>
 <style scoped>
-    /* i{
-        color: #484848;
-    }
-    span{
-        color: #484848;
-    } */
     .nav{
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
-        z-index:9999;
+        z-index:99;
         background: #fff;
         padding: 10px;
         box-sizing: border-box;

@@ -4,7 +4,7 @@
             <img class="img1" src="../imgs/logo.png" alt="">
             <div>
                 <img src="../imgs/search.png" alt="">
-                <input type="text">
+                    <input type="text">
             </div>
             <span class="sp">
                 <img class="img2" src="../imgs/information2.png" alt="">

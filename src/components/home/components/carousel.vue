@@ -1,7 +1,10 @@
 <template>
   <swiper :options="swiperOption">
     <swiper-slide v-for="(slide, index) in swiperSlides" :key="index">
-        <img :src='slide' alt='' class='pic'>
+      <router-link :to="{name: slide.name}">
+        <img :src='slide.img' alt='' class='pic'>
+      </router-link>
+        <!-- <router-link :to="slide.href" tag="img" class='pic' :src='slide.img' @click='test'></router-link> -->
     </swiper-slide>
     <div class="swiper-pagination" slot="pagination"></div>
   </swiper>
@@ -30,6 +33,11 @@ export default {
   mounted () {
 
   },
+  methods: {
+    test () {
+      console.log(1)
+    }
+  },
   async created () {
     this.swiperSlides = await getHomeBanner()
   }
@@ -47,5 +55,7 @@ export default {
     .pic{
       width: 100%;
       vertical-align: bottom;
+      cursor: pointer;
+      z-index: 100;
     }
 </style>

@@ -5,6 +5,7 @@ import classify from '@/components/classify/classify'
 import find from '@/components/find/find'
 import shop from '@/components/shop/shop'
 import mine from '@/components/mine/mine'
+import carouselRouter from './carouselRouter'
 
 Vue.use(Router)
 
@@ -62,6 +63,7 @@ export default new Router({
     {
       path: '*',
       redirect: '/home'
-    }
+    },
+    ...carouselRouter
   ]
 })
