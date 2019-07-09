@@ -43,8 +43,8 @@ export default {
         .mspro {
           width: 100%;
           overflow-x: auto;
-          margin-top:10px;
-          border: 7px solid #f6f6f6;
+          margin-top:20px;
+          border: 14px solid #f6f6f6;
           box-sizing: border-box;
         }
         img {
@@ -52,30 +52,31 @@ export default {
         }
         }
         .product {
-          width: 1000px;
+          width: 2000px;
           font-size: 0;
           display: flex;
           flex-direction: row;
+          padding-bottom: 16px;
           li {
-            width: 100px;
-            height: 130px;
-            padding: 5px;
+            width: 200px;
+            height: 260px;
+            padding: 10px;
             display: inline-block;
             vertical-align: top;
             .content {
-              font-size: 12px;
-              height: 28px;
+              font-size: 24px;
+              height: 56px;
             }
             .nprice {
-              font-size: 14px;
+              font-size: 28px;
               color: #F3344A;
-              margin-left: 20px;
+              margin-left: 40px;
             }
             .oprice {
-              font-size: 12px;
+              font-size: 24px;
               color: #D0D0D0;
               text-decoration: line-through;
-              margin-left: 20px;
+              margin-left: 40px;
             }
             a:hover{
               text-decoration: none;
@@ -85,7 +86,7 @@ export default {
         }
     .pic_1{
         width: 100%;
-        margin-top: 10px;
+        margin-top: 20px;
     }
     .box{
         overflow-x: auto;

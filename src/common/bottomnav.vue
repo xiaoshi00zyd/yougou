@@ -47,9 +47,9 @@ export default {
         width: 100%;
         z-index:9999;
         background: #fff;
-        padding: 5px;
+        padding: 10px;
         box-sizing: border-box;
-        border-top:1px solid #ccc;
+        border-top:2px solid #ccc;
     }
     .nav i,.nav span{
         color: #666;
@@ -67,13 +67,13 @@ export default {
     }
 
     .nav ul li i{
-        font-size: 18px;
+        font-size: 36px;
         text-align: center;
         /* color: #484848; */
     }
 
     .nav ul li span{
-        font-size: 12px;
+        font-size: 24px;
         text-align: center;
     }
     .router-link-active i,.router-link-active span{

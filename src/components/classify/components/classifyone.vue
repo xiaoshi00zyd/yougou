@@ -51,22 +51,22 @@ export default {
 
 <style scoped lang="less">
   .box {
-    width: 90px;
+    width: 180px;
     ul {
       display: flex;
       flex-wrap: wrap;
       li {
         width: 100%;
-        height: 40px;
+        height: 80px;
         text-align: center;
-        line-height: 40px;
-        font-size: 14px;
-        border-bottom: 1px solid #ddd;
+        line-height: 80px;
+        font-size: 28px;
+        border-bottom: 2px solid #ddd;
         color:#666;
       }
       .picth {
         background-color: #eee;
-        border-right: 1px solid #eee;
+        border-right: 2px solid #eee;
         color: #ff0000;
       }
     }

@@ -42,27 +42,27 @@ export default {
 <style scoped lang='less'>
     .big{
         .box_1{
-            padding: 8px;
+            padding: 16px;
             background: #fff;
-            border: 5px solid #f6f6f6;
+            border: 10px solid #f6f6f6;
             box-sizing: border-box;
-            border-bottom: 10px solid #ebebeb;
+            border-bottom: 20px solid #ebebeb;
             .img_1{
                 width: 100%;
             }
             .img_2{
                 width: 50%;
-                margin-top:10px;
+                margin-top:20px;
             }
             .ul_1{
                 float: right;
                 width: 50%;
-                padding: 10px;
+                padding: 20px;
                 box-sizing: border-box;
                 .li_1{
-                    border-bottom: 1px solid #666666;
+                    border-bottom: 2px solid #666666;
                     position: relative;
-                    padding-bottom: 8px;
+                    padding-bottom: 16px;
                     box-sizing: border-box;
                     a{
                     display: block;
@@ -71,14 +71,14 @@ export default {
                         text-decoration: none;
                     }
                     .a_1,.a_3,.a_4{
-                        font-size: 12px;
+                        font-size: 24px;
                         color: #666666;
-                        margin-top: 5px;
+                        margin-top: 10px;
                     }
                     .a_2{
-                        font-size: 16px;
+                        font-size: 32px;
                         color: #7b51ff;
-                        margin-top: 10px;
+                        margin-top: 20px;
                     }
                     img{
                         width: 40%;
@@ -90,7 +90,7 @@ export default {
                 }
                 .li_2{
                     position: relative;
-                    padding-bottom: 8px;
+                    padding-bottom: 16px;
                     box-sizing: border-box;
                     a{
                     display: block;
@@ -99,14 +99,14 @@ export default {
                         text-decoration: none;
                     }
                     .a_1,.a_3,.a_4{
-                        font-size: 12px;
+                        font-size: 24px;
                         color: #666666;
-                        margin-top: 5px;
+                        margin-top: 10px;
                     }
                     .a_2{
-                        font-size: 16px;
+                        font-size: 32px;
                         color: #ff5465;
-                        margin-top: 10px;
+                        margin-top: 20px;
                     }
                     img{
                         width: 40%;

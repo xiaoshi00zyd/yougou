@@ -43,6 +43,6 @@ export default {
   background:#EEEEEE;
 }
 .empty {
-  height: 44px;
+  height: 88px;
 }
 </style>

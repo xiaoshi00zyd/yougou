@@ -30,11 +30,11 @@ export default {
       width: 100%;
     }
     .top{
-        width: 40px;
-        height: 40px;
+        width: 80px;
+        height: 80px;
         position:fixed;
-        bottom: 58px;
-        right: 20px;
+        bottom: 116px;
+        right: 40px;
         z-index: 11;
         opacity: 0.7;
     }

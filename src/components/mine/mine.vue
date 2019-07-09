@@ -24,8 +24,13 @@ export default {
 
 </script>
 <style scoped>
+/* .content{
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+} */
 .dingti{
   width: 100%;
-  height: 44px;
+  height: 88px;
 }
 </style>

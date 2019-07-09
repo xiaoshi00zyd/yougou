@@ -73,7 +73,7 @@ export default {
                 width: 80%;
             }
             p{
-                font-size: 12px;
+                font-size: 24px;
             }
         }
     }

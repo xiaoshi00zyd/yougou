@@ -67,7 +67,7 @@ export default {
     .sp{
         display: block;
         width: 100%;
-        height: 5px;
+        height: 10px;
         background: #f6f6f6;
     }
 </style>

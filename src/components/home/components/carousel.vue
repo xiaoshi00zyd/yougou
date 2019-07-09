@@ -40,6 +40,10 @@ export default {
         background:#fe0000;
         opacity:0.6;
     }
+    .swiper-pagination-bullet{
+      width: 10px;
+      height: 10px;
+    }
     .pic{
       width: 100%;
       vertical-align: bottom;

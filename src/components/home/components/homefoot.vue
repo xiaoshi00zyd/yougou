@@ -29,27 +29,27 @@ export default {
 
 <style scoped lang='less'>
     .foot{
-        padding: 10px;
+        padding: 20px;
         box-sizing: border-box;
         background: #f6f6f6;
-        border-top: 1px solid #dddddd;
+        border-top: 2px solid #dddddd;
         .left,.right{
             color: #666;
-            font-size: 14px;
-            margin-top: 5px;
+            font-size: 28px;
+            margin-top: 10px;
             a{
                 color: #666;
             }
         }
         .right{
             float: right;
-            margin-top: -20px;
-            margin-right: 10px;
+            margin-top: -40px;
+            margin-right: 20px;
         }
         p,h5{
             color: #a0a0a0;
-            font-size: 14px;
-            margin-top: 10px;
+            font-size: 28px;
+            margin-top: 20px;
             display: inline-block;
             width: 100%;
             text-align: center;

@@ -55,12 +55,12 @@ export default {
 
 <style scoped>
   .boxOne {
-    height: 45px;
+    height: 90px;
     width: 100%;
   }
   .box {
     width: 100%;
-    max-width: 800px;
+    max-width: 1600px;
     margin: 0 auto;
     display: flex;
   }
@@ -76,6 +76,6 @@ export default {
   }
   .boxS{
      width:100%;
-    height: 49px;
+    height: 98px;
   }
 </style>

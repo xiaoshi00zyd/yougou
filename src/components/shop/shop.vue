@@ -44,6 +44,6 @@ export default {
     overflow: hidden;
 }
 .empty {
-  height: 44px;
+  height: 88px;
 }
 </style>

@@ -42,26 +42,27 @@ export default {
 
 <style scoped lang='less'>
     .big{
-        border: 7px solid #f6f6f6;
-        padding-bottom: 20px;
+        border: 14px solid #f6f6f6;
+        padding-bottom: 40px;
         .myh2{
             display: inline-block;
             width: 100%;
-            height: 30px;
-            line-height: 40px;
-            padding-left: 10px;
+            height: 60px;
+            line-height: 80px;
+            padding-left: 20px;
             box-sizing: border-box;
+            font-size: 32px;
         }
         .myul{
             display: flex;
             flex-direction: row;
-            margin-top: 10px;
-            height: 30px;
-            border-bottom: 1px solid #f6f6f6;
+            margin-top: 20px;
+            height: 60px;
+            border-bottom: 2px solid #f6f6f6;
             li{
                 width: 25%;
                 text-align: center;
-                font-size: 14px;
+                font-size: 28px;
             }
         }
         .myli{
@@ -70,10 +71,10 @@ export default {
                 display: block;
                 background: #333333;
                 color: #e6e6e6;
-                border-radius: 15px;
-                font-size: 14px;
+                border-radius: 30px;
+                font-size: 28px;
                 img{
-                    width: 12px;
+                    width: 24px;
                 }
             }
         }

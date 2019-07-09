@@ -61,7 +61,7 @@ export default {
 </script>
 <style scoped>
   .box{
-    padding-bottom: 60px;
+    padding-bottom: 96px;
     /* padding-top: 40px; */
   }
 </style>

@@ -10,6 +10,7 @@ import './common/mixin'
 import '@/assets/reset.css'
 import '@/assets/common.css'
 import 'swiper/dist/css/swiper.css'
+import 'lib-flexible'
 
 Vue.config.productionTip = false
 

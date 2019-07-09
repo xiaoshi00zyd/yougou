@@ -126,7 +126,7 @@ export default {
 <style scoped>
 .con {
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   box-sizing: border-box;
 }
 .con a{
@@ -138,23 +138,23 @@ export default {
   display: flex;
   justify-content: center;
   align-content: center;
-  font-size: 14px;
-  border-bottom: 1px solid #d9d9d9;
+  font-size: 28px;
+  border-bottom: 2px solid #d9d9d9;
   cursor: pointer;
 }
 .top .left {
   width: 50%;
   text-align: center;
-  height: 36px;
-  line-height: 36px;
-  border-bottom: 1px solid #ff4664;
+  height: 72px;
+  line-height: 72px;
+  border-bottom: 2px solid #ff4664;
   color: #ff4664;
 }
 .top .right {
   width: 50%;
   text-align: center;
-  height: 36px;
-  line-height: 36px;
+  height: 72px;
+  line-height: 72px;
 }
 .center {
   width:100%;
@@ -168,13 +168,13 @@ input::-webkit-input-placeholder{
   content: "\e64c";
   display: block;
   font-family:'FontAwesome';
-  font-size: 16px;
+  font-size: 32px;
 }
 .inp1 {
   width: 100%;
-  height: 45px;
+  height: 90px;
   border: none;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
   /* position: relative; */
 }
 .center .cenTop2 {
@@ -183,36 +183,37 @@ input::-webkit-input-placeholder{
 .center .inp2 {
   width: 100%;
   border: none;
-  height: 45px;
-  line-height: 45px;
-  border-bottom: 1px solid #d9d9d9;
+  height: 90px;
+  line-height: 90px;
+  border-bottom: 2px solid #d9d9d9;
 }
 .cenTop .Verification {
-  width: 93px;
-  height: 30px;
-  font-size: 13px;
+  width: 186px;
+  height: 60px;
+  font-size: 26px;
   position: absolute;
-  top: 5px;
-  left: 75%;
+  top: 10px;
+  /* left: 150%; */
+  right: 2%;
   color: #333;
-  line-height: 30px;
+  line-height: 60px;
   text-align: center;
-  border-left: 1px solid #d9d9d9;
+  border-left: 2px solid #d9d9d9;
 }
 .mark{
-  font-size: 16px;
+  font-size: 32px;
   text-decoration: none;
   color:gray;
   position: absolute;
-  top:12px;
-  left: 69%;
+  top:24px;
+  left: 138%;
 }
 .verifimark{
-  font-size: 16px;
+  font-size: 32px;
   text-decoration: none;
   color:gray;
   position: absolute;
-  top:60px;
+  top:120px;
   right: 0;
 }
 .AccountSign{
@@ -224,27 +225,27 @@ input::-webkit-input-placeholder{
   position: relative;
 }
 .phoneaccount{
-  font-size: 16px;
+  font-size: 32px;
   text-decoration: none;
   color:gray;
   position: absolute;
-  top:12px;right: 0
+  top:24px;right: 0
 }
 .account{
   left: 82%;
 }
 .glasses{
-  font-size: 30px;
-  line-height: 23px;
+  font-size: 60px;
+  line-height: 46px;
 }
 .aglasses{
-  font-size: 50px;
+  font-size: 100px;
   position: absolute;
-  top: 300px;
+  top: 600px;
 }
 .zhengyanglasses{
-  font-size: 50px;
+  font-size: 100px;
   position: absolute;
-  top: 300px;
+  top: 600px;
 }
 </style>

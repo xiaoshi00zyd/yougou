@@ -60,26 +60,26 @@ export default {
     width: 100%;
     background: #EEEEEE;
     text-align: center;
-    padding-top:20px;
+    padding-top:40px;
 }
 .ygIndexCountHourTi {
     width: 50%;
     text-align: center;
-    border-top: 1px solid #ccc;
-    height: 20px;
+    border-top: 2px solid #ccc;
+    height: 40px;
     margin: 0 auto;
     position: relative;
 }
 .ygIndexCountHourTiP{
     position: absolute;
-    top: -12px;
+    top: -24px;
     left: 0;
     width: 100%;
 }
 .ygIndexCountHourTiP p {
     background-color: #eee;
-    font-size: 15px;
-    padding: 0 10px;
+    font-size: 30px;
+    padding: 0 20px;
     font-weight: 400;
     display: inline-block;
     min-width: 1%;
@@ -88,20 +88,20 @@ export default {
     box-sizing: border-box;
     position: relative;
     white-space: normal;
-    height: 18px;
+    height: 36px;
     margin: 0 auto;
 }
 .content {
     background:#EEEEEE;
 }
 .content .one{
-    margin-bottom:18px;
+    margin-bottom:36px;
 }
 .content a {
     display: block;
-    width: calc(100%-26px);
+    width: calc(100%-52px);
     background:#FFFFFF;
-    padding: 0 16px 10px;
+    padding: 0 32px 20px;
 }
 .one img {
     display: block;
@@ -109,15 +109,15 @@ export default {
     margin: auto
 }
 .one dt {
-    font-size: 14px;
-    padding: 10px 0;
+    font-size: 28px;
+    padding: 20px 0;
     color:#333;
 }
 .introduce {
     color:#a0a0a0;
-    font-size: 12px;
+    font-size: 24px;
 }
 .picture {
-    padding-bottom:10px;
+    padding-bottom:20px;
 }
 </style>

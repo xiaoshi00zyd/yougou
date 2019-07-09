@@ -43,7 +43,7 @@ export default {
       note: {
         backgroundImage: 'url(' + require('../imgs/point.png') + ')',
         // backgroundSize: '25px auto',
-        marginTop: '90px',
+        marginTop: '180px',
         backgroundPosition: 'left center',
         backgroundRepeat: 'repeat-x'
       }
@@ -58,44 +58,44 @@ export default {
 <style scoped >
     .sign{
             width: 100%;
-            margin-top: 30px;
+            margin-top: 60px;
             padding: 0;
             background: #999;
             color: #fff;
-            height: 44px;
-            line-height: 30px;
-            font-size: 16px;
+            height: 88px;
+            line-height: 60px;
+            font-size: 32px;
             border: 0;
     }
     .wjpassword{
         width: 100%;
         display: flex;
         justify-content: flex-end;
-        padding-top: 5px;
+        padding-top: 10px;
         box-sizing: border-box;
         text-decoration: none;
         color: #666;
-        font-size: 13px;
+        font-size: 26px;
     }
     .fast{
         width: 100%;
         display: flex;
         justify-content: center;
-        padding-top: 5px;
+        padding-top: 10px;
         box-sizing: border-box;
-        font-size: 12px;
+        font-size: 24px;
         color: #ff4664;
     }
     .hd{
         display: flex;
         justify-content: center;
-        margin: 0 30px;
+        margin: 0 60px;
     }
     .hd span{
         background: #fff;
         display: inline-block;
-        padding: 0 6px;
-        font-size: 10px;
+        padding: 0 12px;
+        font-size: 20px;
         text-align: center;
         color: #a0a0a0;
     }
@@ -103,32 +103,32 @@ export default {
         list-style: none;
         display:flex;
         justify-content: space-evenly;
-        padding-top: 20px;
+        padding-top: 40px;
         box-sizing: border-box;
     }
     .cooperation ul li img{
-        width: 38px;
-        height: 38px;
+        width: 76px;
+        height: 76px;
     }
     .baijia{
         display: flex;
         justify-content: center;
-        font-size: 12px;
+        font-size: 24px;
     }
     .ensure{
         color:#666;
-        font-size: 12px;
+        font-size: 24px;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 80px;
+        margin-top: 160px;
     }
     .ensure i{
-        font-size: 10px;
-        padding-left: 40px;
+        font-size: 20px;
+        padding-left: 80px;
     }
     .abcd{
         width: 100%;
-        height: 50px;
+        height: 100px;
     }
 </style>

@@ -37,9 +37,10 @@ export default {
         width: 100%;
         display: flex;
         flex-direction: row;
+        // padding-bottom: 20px;
         li{
             width: 30%;
-            margin-left: 15px;
+            margin-left: 30px;
             img{
                 width: 100%;
             }

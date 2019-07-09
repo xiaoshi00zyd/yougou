@@ -30,11 +30,11 @@ export default {
 <style scoped>
 .search_2 {
     background: linear-gradient(0deg, rgba(255,255,255,0.3), #000 60%);
-    height: 44px;
+    height: 88px;
     width: 100%;
     display: flex;
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 0 20px;
     justify-content: space-between;
     align-items: center;
     position: fixed;
@@ -44,44 +44,44 @@ export default {
     border-bottom: none;
 }
 .search_2 .img1 {
-    width: 50px;
-    height: 30px;
+    width: 100px;
+    height: 60px;
 }
 
 .search_2 div  {
     flex:1;
     background: #fff;
-    height: 32px;
-    border-radius: 5px;
+    height: 64px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
-    margin: 0 8px;
+    margin: 0 16px;
 }
 
 .search_2 div img {
-    width: 16px;
-    margin-left: 12px;
+    width: 32px;
+    margin-left: 24px;
 }
 
 .search_2 div input {
     border: none;
-    margin-left: 10px;
+    margin-left: 20px;
     flex:1;
-    height: 30px;
+    height: 60px;
     background: transparent;
-    font-size: 14px;
+    font-size: 28px;
 }
 
 .search_2 .img2 {
-    width: 15px;
-    height: 15px;
-    margin-left: 2px;
+    width: 30px;
+    height: 30px;
+    margin-left: 4px;
 }
 
 .news{
     float: left;
     color: #fff;
-    font-size: 10px;
+    font-size: 20px;
 }
 
 .sp{
