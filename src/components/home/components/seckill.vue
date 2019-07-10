@@ -1,25 +1,29 @@
 <template>
     <div class="big">
         <div v-for="(list,index) in ClassHomeSeckill" :key="index" class="box_1">
-            <router-link to="/seckill1">
+            <router-link to="/seckill0">
                 <img v-lazy="list.seckill" class="img_1">
             </router-link>
-            <router-link to="/seckill2">
+            <router-link to="/seckill1">
                 <img v-lazy="list.leftImg" class="img_2">
             </router-link>
             <ul class="ul_1">
                 <li class="li_1">
-                    <router-link to="seckill3"><a href="" class="a_1">{{list.pone}}</a></router-link>
-                    <router-link to="seckill4"><a href="" class="a_2">{{list.ptwo}}</a></router-link>
-                    <router-link to="seckill5"><a href="" class="a_3">{{list.psh}}</a></router-link>
-                    <router-link to="seckill6"><a href="" class="a_4">{{list.pfp}}</a></router-link>
-                    <router-link to="seckill7"><a href=""><img v-lazy="list.dimg"></a></router-link>
+                    <router-link to="seckill2">
+                    <a href="" class="a_1">{{list.pone}}</a>
+                    <a href="" class="a_2">{{list.ptwo}}</a>
+                    <a href="" class="a_3">{{list.psh}}</a>
+                    <a href="" class="a_4">{{list.pfp}}</a>
+                    <a href=""><img v-lazy="list.dimg"></a>
+                    </router-link>
                 </li>
                 <li class="li_2">
-                    <router-link to="seckill8"><a href="" class="a_2">{{list.pfi}}</a></router-link>
-                    <router-link to="seckill9"><a href="" class="a_3">{{list.pse}}</a></router-link>
-                    <router-link to="seckill10"><a href="" class="a_4">{{list.pfp}}</a></router-link>
-                    <router-link to="seckill11"><a href=""><img v-lazy="list.dtimg"></a></router-link>
+                    <router-link to="seckill7">
+                    <a href="" class="a_2">{{list.pfi}}</a>
+                    <a href="" class="a_3">{{list.pse}}</a>
+                    <a href="" class="a_4">{{list.pfp}}</a>
+                    <a href=""><img v-lazy="list.dtimg"></a>
+                    </router-link>
                 </li>
             </ul>
         </div>
