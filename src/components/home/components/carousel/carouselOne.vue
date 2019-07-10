@@ -8,11 +8,15 @@
 export default {
   data () {
     return {
-
+      num: null
     }
   },
   methods: {
 
+  },
+  created () {
+    this.num = this.$route.params.id
+    console.log(this.num)
   }
 }
 </script>
