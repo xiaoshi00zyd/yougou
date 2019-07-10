@@ -3,32 +3,40 @@
         <div v-if="this.showNum=='0'&&!this.showList">
             <ul class="ul_2">
                 <li v-for="(list,index) in recommend.list" :key="index">
-                    <img v-lazy="list.img">
-                    <p>￥{{list.price}}</p>
+                    <router-link :to="{name: list.name}">
+                        <img v-lazy="list.img">
+                        <p>￥{{list.price}}</p>
+                    </router-link>
                 </li>
             </ul>
         </div>
         <div v-if="this.showNum=='1'&&!this.showList">
             <ul class="ul_2">
                 <li v-for="(list,index) in recommend.list" :key="index">
-                    <img v-lazy="list.img">
-                    <p>￥{{list.price}}</p>
+                    <router-link :to="{name: list.name}">
+                        <img v-lazy="list.img">
+                        <p>￥{{list.price}}</p>
+                    </router-link>
                 </li>
             </ul>
         </div>
         <div v-if="this.showNum=='2'&&!this.showList">
             <ul class="ul_2">
                 <li v-for="(list,index) in recommend.list" :key="index">
-                    <img v-lazy="list.img">
-                    <p>￥{{list.price}}</p>
+                    <router-link :to="{name: list.name}">
+                        <img v-lazy="list.img">
+                        <p>￥{{list.price}}</p>
+                    </router-link>
                 </li>
             </ul>
         </div>
         <div v-if="this.showList">
             <ul class="ul_2">
                 <li v-for="(list,index) in recommend4.list" :key="index">
-                    <img v-lazy="list.img">
-                    <p>￥{{list.price}}</p>
+                    <router-link :to="{name: list.name}">
+                        <img v-lazy="list.img">
+                        <p>￥{{list.price}}</p>
+                    </router-link>
                 </li>
             </ul>
         </div>

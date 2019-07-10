@@ -4,12 +4,16 @@
             <img class="img1" src="../imgs/logo.png" alt="">
             <div>
                 <img src="../imgs/search.png" alt="">
+                <router-link to="/classifyFoot">
                     <input type="text">
+                </router-link>
             </div>
+            <router-link to="/">
             <span class="sp">
                 <img class="img2" src="../imgs/information2.png" alt="">
                 <p class="news">消息</p>
             </span>
+            </router-link>
         </div>
     </div>
 </template>

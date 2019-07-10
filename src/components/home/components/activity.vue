@@ -4,7 +4,9 @@
             <img v-lazy="activitylist.img" class="img_1">
             <ul class="ul_1">
                 <li v-for="(activity,index) in activitylist.list" :key='index'>
-                    <img v-lazy='activity'>
+                    <router-link :to="{name: activity.name}">
+                        <img v-lazy='activity.src'>
+                    </router-link>
                 </li>
             </ul>
         </div>
