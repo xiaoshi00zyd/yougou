@@ -30,7 +30,7 @@ export default [
   {
     name: 'modules4',
     path: '/modules4',
-    component: () => import('../components/home/components/fourmodules/modules4.vue'),
+    component: () => import('../components/home/components/fourmodules/customization.vue'),
     meta: {
       title: '定制',
       cache: false
