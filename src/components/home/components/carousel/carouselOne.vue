@@ -5,6 +5,7 @@
         <img class="img1" src="../../../shop/imgs/leftarrow.png" alt="" @click="goback">
           <div>
             <h2 class="title">清凉季 至高减150元</h2>
+          </div>
         <img class="img2" src="../../../shop/imgs/options.png" alt="" @click="changer">
       </div>
       <!-- 占头部的无内容空间 -->
