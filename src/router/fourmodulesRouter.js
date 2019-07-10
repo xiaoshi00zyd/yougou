@@ -28,8 +28,8 @@ export default [
     }
   },
   {
-    name: 'modules4',
-    path: '/modules4',
+    name: 'customization',
+    path: '/customization',
     component: () => import('../components/home/components/fourmodules/customization.vue'),
     meta: {
       title: '定制',
