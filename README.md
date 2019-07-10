@@ -1,4 +1,4 @@
-# 优购
+# yougou
 
 > A Vue.js project
 
