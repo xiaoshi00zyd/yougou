@@ -1,10 +1,7 @@
 <template>
   <div id="app">
     <bottomnav></bottomnav>
-    <keep-alive>
-      <router-view v-if="this.$route.meta.cache"></router-view>
-    </keep-alive>
-      <router-view v-if="!this.$route.meta.cache"></router-view>
+    <router-view/>
   </div>
 </template>
 
