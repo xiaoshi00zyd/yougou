@@ -69,4 +69,7 @@ export function getDiscover () {
 // 商品列表
 export function getCommodity () {
   return axios.get('productList')
+// 清凉季接口
+export function getQingliangji () {
+  return axios.get('qingliangji')
 }
