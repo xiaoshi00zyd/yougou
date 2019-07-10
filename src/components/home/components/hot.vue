@@ -17,6 +17,7 @@
                 </li>
             </ul>
         </div>
+        <!-- <router-link to='/test'>点我</router-link> -->
         <!-- <span class="sp"></span> -->
     </div>
 </template>
@@ -67,7 +68,7 @@ export default {
     .sp{
         display: block;
         width: 100%;
-        height: 5px;
+        height: 10px;
         background: #f6f6f6;
     }
 </style>

@@ -32,6 +32,7 @@ export default {
         display: flex;
         flex-direction: row;
         width: 100%;
+        margin-top: -6px;
         &:nth-child(3){
             li{
                 width: calc(100%/3);

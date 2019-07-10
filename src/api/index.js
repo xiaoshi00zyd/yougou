@@ -33,6 +33,10 @@ export function getActivity () {
 export function getHomeBaner () {
   return axios.get('HomeBaner')
 }
+// 为你推荐
+export function getRecommend () {
+  return axios.get('recommend')
+}
 
 // 优购分类接口 全部品牌
 export function getOptionGroup () {

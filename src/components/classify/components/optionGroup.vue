@@ -6,7 +6,7 @@
                 <p>{{item.title}}</p>
                 <li v-for="(itemo,indexo) in item.brand" :key="indexo">
                     <a href="">
-                        <img :src="itemo.bootImg" alt="">
+                        <img v-lazy="itemo.bootImg" alt="">
                         {{itemo.text}}
                     </a>
                 </li>
@@ -18,7 +18,7 @@
                 <p>{{item.title}}</p>
                 <li v-for="(itemo,indexo) in item.brand" :key="indexo">
                     <a href="">
-                        <img :src="itemo.womenShoesImg" alt="">
+                        <img v-lazy="itemo.womenShoesImg" alt="">
                         {{itemo.text}}
                     </a>
                 </li>
@@ -30,7 +30,7 @@
                 <p>{{item.title}}</p>
                 <li v-for="(itemo,indexo) in item.brand" :key="indexo">
                     <a href="">
-                        <img :src="itemo.manShoesImg" alt="">
+                        <img v-lazy="itemo.manShoesImg" alt="">
                         {{itemo.text}}
                     </a>
                 </li>
@@ -42,7 +42,7 @@
                 <p>{{item.title}}</p>
                 <li v-for="(itemo,indexo) in item.brand" :key="indexo">
                     <a href="">
-                        <img :src="itemo.soprtImg" alt="">
+                        <img v-lazy="itemo.soprtImg" alt="">
                         {{itemo.text}}
                     </a>
                 </li>
@@ -54,7 +54,7 @@
                 <p>{{item.title}}</p>
                 <li v-for="(itemo,indexo) in item.brand" :key="indexo">
                     <a href="">
-                        <img :src="itemo.soprtImg" alt="">
+                        <img v-lazy="itemo.soprtImg" alt="">
                         {{itemo.text}}
                     </a>
                 </li>
@@ -122,7 +122,7 @@ export default {
     .box1{
         width: 100%;
         background: #eee;
-        padding: 10px 0 5px 3px;
+        padding: 20px 0 10px 6px;
         box-sizing: border-box;
         ul {
             display: flex;
@@ -130,25 +130,25 @@ export default {
             background: white;
             p {
                 width: 100%;
-                height: 40px;
+                height: 80px;
                 text-align: center;
-                line-height: 40px;
+                line-height: 80px;
                 background: #eee;
-                font-size: 16px;
+                font-size: 32px;
                 color: #333;
             }
             li{
-                width:33%;
+                width: calc(100%/3);
                 text-align: center;
                 a {
                     display: block;
                     background-color: #fff;
-                    margin: 0 3px 5px;
+                    margin: 0 6px 10px;
                     text-align: center;
-                    padding: 10px 5px;
+                    padding: 20px 10px;
                     color: #333;
                     text-decoration: none;
-                    font-size: 14px;
+                    font-size: 28px;
                     img {
                         width: 100%;
                     }
