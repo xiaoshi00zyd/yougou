@@ -8,6 +8,12 @@ import mine from '@/components/mine/mine'
 import carouselRouter from './carouselRouter'
 // 分类下搜索框分支路由
 import classifyFoot from './classifyRouter'
+// 签到
+import fourmodules from './fourmodulesRouter'
+// 热门分类
+import hot from './hotRouter'
+// 限时秒杀
+import seckill from './seckillRouter'
 
 Vue.use(Router)
 
@@ -67,6 +73,9 @@ export default new Router({
       redirect: '/home'
     },
     ...carouselRouter,
-    ...classifyFoot
+    ...classifyFoot,
+    ...fourmodules,
+    ...hot,
+    ...seckill
   ]
 })
