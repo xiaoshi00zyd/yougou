@@ -48,6 +48,11 @@
             </li>
         </ul>
       </div>
+      <!-- 返回首页 -->
+      <router-link to="/home" tag="div" class="box6">
+        <i class="iconfont icon-shouye"></i>
+        <span>首页</span>
+      </router-link>
     </div>
 </template>
 
@@ -223,6 +228,36 @@ export default {
             }
           }
         }
+      }
+    }
+
+    .box6 {
+      -webkit-box-align: center;
+      -webkit-box-direction: normal;
+      -webkit-box-orient: vertical;
+      -webkit-box-pack: center;
+      align-items: center;
+      background-color: rgba(0,0,0,.5);
+      border-radius: 50%;
+      bottom: 260px;
+      display: -webkit-box;
+      display: flex;
+      flex-direction: column;
+      height: 51PX;
+      justify-content: center;
+      position: fixed;
+      right: 30px;
+      width: 51PX;
+      z-index: 100;
+      i {
+        color: #fff;
+        font-size: 40px;
+      }
+      span {
+        color: #fff;
+        font-size: 24px;
+        line-height: 1;
+        margin-top: 8px;
       }
     }
   }
