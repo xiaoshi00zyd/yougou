@@ -35,6 +35,13 @@
         <div class="signSectionTitle">
           <a href="">热门商品推荐</a>
         </div>
+        <ul class="signEight">
+          <li v-for="(item,index) in sign" :key="index">
+            <img src="" alt="">
+            <p></p>
+            <p></p>
+          </li>
+        </ul>
         <ul class="signHotProUl clearfix"></ul>
         </div>
     </div>
