@@ -40,27 +40,27 @@ export function getRecommend () {
 
 // 优购分类接口 全部品牌
 export function getOptionGroup () {
-  return axios.get('http://192.168.11.99:3000/api/Allboot')
+  return axios.get('Allboot')
 }
 // 优购分类接口 女鞋
 export function getWomanShoe () {
-  return axios.get('http://192.168.11.99:3000/api/womenShoes')
+  return axios.get('womenShoes')
 }
 // 优购分类接口 男鞋
 export function getManShoe () {
-  return axios.get('http://192.168.11.99:3000/api/manShoes')
+  return axios.get('manShoes')
 }
 // 优购分类接口 运动
 export function getSoprt () {
-  return axios.get('http://192.168.11.99:3000/api/soprt')
+  return axios.get('soprt')
 }
 // 优购分类接口 户外
 export function getOutdoor () {
-  return axios.get('http://192.168.11.99:3000/api/outdoor')
+  return axios.get('outdoor')
 }
 // 优购分类接口 童装
 export function getChild () {
-  return axios.get('http://192.168.11.99:3000/api/child')
+  return axios.get('child')
 }
 // 发现接口
 export function getDiscover () {
@@ -77,3 +77,8 @@ export function getQingliangji () {
 // export function getCommodity () {
 //   return axios.get('productList')
 // }
+
+// 主页定制接口
+export function getcustomization () {
+  return axios.get('customization')
+}
