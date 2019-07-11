@@ -75,12 +75,16 @@ export default {
         flex-direction: row;
         flex-wrap: wrap;
         li{
+            a:hover{
+                text-decoration: none;
+            }
             width: 25%;
             text-align: center;
             img{
                 width: 80%;
             }
             p{
+                color: #000;
                 font-size: 24px;
             }
         }
