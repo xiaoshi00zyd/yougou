@@ -1,15 +1,19 @@
 <template>
     <div>
-        <div class="search" ref='box_1'>
+        <div class="search_2" ref='box_1'>
             <img class="img1" src="../imgs/logo.png" alt="">
             <div>
                 <img src="../imgs/search.png" alt="">
-                <input type="text">
+                <router-link to="/classifyFoot">
+                    <input type="text">
+                </router-link>
             </div>
+            <router-link to="/">
             <span class="sp">
                 <img class="img2" src="../imgs/information2.png" alt="">
                 <p class="news">消息</p>
             </span>
+            </router-link>
         </div>
     </div>
 </template>
@@ -19,22 +23,22 @@ export default {
   mounted () {
     $(window).scroll(() => {
       if ($(document).scrollTop() > 100) {
-        $('.search').css('background', 'linear-gradient(0deg, rgba(238,0,0,0.5), red 60%)')
+        $('.search_2').css('background', 'linear-gradient(0deg, rgba(238,0,0,0.5), red 60%)')
       } else {
-        $('.search').css('background', 'linear-gradient(0deg, rgba(255,255,255,0.3), #000 60%)')
+        $('.search_2').css('background', 'linear-gradient(0deg, rgba(255,255,255,0.3), #000 60%)')
       }
     })
   }
 }
 </script>
 <style scoped>
-.search {
+.search_2 {
     background: linear-gradient(0deg, rgba(255,255,255,0.3), #000 60%);
-    height: 44px;
+    height: 88px;
     width: 100%;
     display: flex;
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 0 20px;
     justify-content: space-between;
     align-items: center;
     position: fixed;
@@ -43,45 +47,45 @@ export default {
     z-index: 999;
     border-bottom: none;
 }
-.search .img1 {
-    width: 50px;
-    height: 30px;
+.search_2 .img1 {
+    width: 100px;
+    height: 60px;
 }
 
-.search div  {
+.search_2 div  {
     flex:1;
     background: #fff;
-    height: 32px;
-    border-radius: 5px;
+    height: 64px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
-    margin: 0 8px;
+    margin: 0 16px;
 }
 
-.search div img {
-    width: 16px;
-    margin-left: 12px;
+.search_2 div img {
+    width: 32px;
+    margin-left: 24px;
 }
 
-.search div input {
+.search_2 div input {
     border: none;
-    margin-left: 10px;
+    margin-left: 20px;
     flex:1;
-    height: 30px;
+    height: 60px;
     background: transparent;
-    font-size: 14px;
+    font-size: 28px;
 }
 
-.search .img2 {
-    width: 15px;
-    height: 15px;
-    margin-left: 2px;
+.search_2 .img2 {
+    width: 30px;
+    height: 30px;
+    margin-left: 4px;
 }
 
 .news{
     float: left;
     color: #fff;
-    font-size: 10px;
+    font-size: 20px;
 }
 
 .sp{

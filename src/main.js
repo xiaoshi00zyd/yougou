@@ -10,10 +10,16 @@ import './common/mixin'
 import '@/assets/reset.css'
 import '@/assets/common.css'
 import 'swiper/dist/css/swiper.css'
+import 'lib-flexible'
 
 Vue.config.productionTip = false
 
 Vue.use(VueAwesomeSwiper)
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title
+  next()
+})
 
 Vue.use(VueLazyload, {
   preLoad: 1.3,

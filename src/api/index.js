@@ -33,6 +33,10 @@ export function getActivity () {
 export function getHomeBaner () {
   return axios.get('HomeBaner')
 }
+// 为你推荐
+export function getRecommend () {
+  return axios.get('recommend')
+}
 
 // 优购分类接口 全部品牌
 export function getOptionGroup () {
@@ -61,4 +65,12 @@ export function getChild () {
 // 发现接口
 export function getDiscover () {
   return axios.get('discover')
+}
+// 商品列表
+export function getCommodity () {
+  return axios.get('productList')
+}
+// 清凉季接口
+export function getQingliangji () {
+  return axios.get('qingliangji')
 }

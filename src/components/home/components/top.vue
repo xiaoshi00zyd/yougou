@@ -1,6 +1,6 @@
 <template>
     <div class="db">
-        <img @click='toTop' v-if="isShow" src='http://touch.m.dangdang.com/images/go-top.png' ref='top' class='top'>
+        <img @click='toTop' v-if="isShow" src='../imgs/top.png' ref='top' class='top'>
     </div>
 </template>
 
@@ -14,20 +14,11 @@ export default {
   },
   methods: {
     toTop () {
-      // document.body.scrollTop = 0
       scrollTo(0, 0)
     }
   },
   mounted () {
     $(window).scroll(() => {
-      // console.log(this.$refs.top.scrollTop)
-      // console.log($(document).scrollTop())
-      // console.log(this.$refs.sp.offsetTop)
-      // if ($(document).scrollTop() > 550) {
-      //   this.isShow = true
-      // } else {
-      //   this.isShow = false
-      // }
       this.isShow = $(document).scrollTop() > 550
     })
   }
@@ -36,14 +27,15 @@ export default {
 
 <style scoped lang='less'>
     .db{
-      width: 100%
+      width: 100%;
     }
     .top{
-        width: 40px;
-        height: 40px;
+        width: 80px;
+        height: 80px;
         position:fixed;
-        bottom: 58px;
-        right: 10px;
+        bottom: 116px;
+        right: 40px;
         z-index: 11;
+        opacity: 0.7;
     }
 </style>

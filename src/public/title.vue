@@ -1,11 +1,11 @@
 <template>
     <div class="search">
-        <img class="img1" src="../imgs/logo.png" alt="">
+        <img class="img1" src="./imgs/logo.png" alt="" @click="upOneLevel">
         <div>
-            <input type="text" placeholder="请输入关键字">
-            <img src="../imgs/search.png" alt="">
+            <router-link to="/classifyFoot" tag="div">请输入关键字</router-link>
+            <img src="./imgs/search.png" alt="">
         </div>
-        <img class="img2" src="../imgs/options.png" alt="" @click="changeHide">
+        <img class="img2" src="./imgs/optionso.png" alt="" @click="changeHide">
     </div>
 </template>
 
@@ -14,6 +14,9 @@ export default {
   methods: {
     changeHide () {
       this.$emit('more')
+    },
+    upOneLevel () {
+      this.$router.go(-1)
     }
   }
 }
@@ -21,11 +24,11 @@ export default {
 
 <style scoped>
     .search {
-        height: 45px;
+        height: 90px;
         width: 100%;
         display: flex;
         box-sizing: border-box;
-        padding: 0 10px;
+        padding: 0 20px;
         justify-content: space-between;
         align-items: center;
         background:#f8f8f8;
@@ -34,42 +37,43 @@ export default {
         left: 0;
     }
     .search .img1 {
-        width: 38px;
-        height: 38px;
-        margin-left:-10px;
+        width: 76px;
+        height: 76px;
+        margin-left:-20px;
         /* margin-right:5px; */
     }
 
     .search div  {
         flex:0.9;
         background: #fff;
-        height: 28px;
+        height: 56px;
         display: flex;
         /* justify-content: center; */
         align-items: center;
         box-sizing:border-box;
-        border-radius: 3px;
-        border: 1px solid #ccc;
-        margin: 0 8px;
+        border-radius: 6px;
+        border: 2px solid #ccc;
+        margin: 0 16px;
     }
 
     .search div img {
-        width: 16px;
-        margin-right: 13px;
+        width: 32px;
+        margin-right: 26px;
     }
 
-    .search div input {
+    .search div div {
         border: none;
-        margin-left: 10px;
+        margin-left: 20px;
+        color: #757575;
         flex:1;
-        height: 32px;
+        height: 64px;
         background: transparent;
-        font-size: 14px;
+        font-size: 28px;
     }
 
     .search .img2 {
-        width: 23px;
-        height: 23px;
+        width: 46px;
+        height: 46px;
     }
 
 </style>

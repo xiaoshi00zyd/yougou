@@ -20,18 +20,18 @@ export default {
 
 <style scoped>
 .content p {
-    font-size:14px;
-    margin-top: 110px;
+    font-size:28px;
+    margin-top: 220px;
     text-align: center;
     color: #666666;
 }
 .content img {
-    width: 70px;
-    height: 55px;
+    width: 140px;
+    height: 110px;
     position: relative;
-    top: 100px;
+    top: 200px;
     left: 50%;
-    margin-left: -35px;
+    margin-left: -70px;
     transform: rotate(-30deg);
 }
 </style>

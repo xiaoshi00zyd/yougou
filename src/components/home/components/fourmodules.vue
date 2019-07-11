@@ -2,9 +2,9 @@
     <div>
         <ul class="ul_1" v-for="(singlist,index) in HomeSigninList[0]" :key="index">
             <li v-for="(sing,index) in singlist" :key="index">
-                <a :href="sing.href">
+                <router-link :to="{name:sing.name}">
                     <img :src="sing.src" >
-                </a>
+                </router-link>
             </li>
         </ul>
     </div>
@@ -32,6 +32,7 @@ export default {
         display: flex;
         flex-direction: row;
         width: 100%;
+        margin-top: -6px;
         &:nth-child(3){
             li{
                 width: calc(100%/3);

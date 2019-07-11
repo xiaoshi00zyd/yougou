@@ -4,20 +4,19 @@
             <img v-lazy="list.img" class="img_1">
             <ul class="ul_1">
                 <li v-for="(img1, index) in list.up" :key="index">
-                    <a href="">
-                        <img v-lazy="img1">
-                    </a>
+                    <router-link :to="{name:img1.name}">
+                        <img v-lazy="img1.src">
+                    </router-link>
                 </li>
             </ul>
             <ul class="ul_2">
                 <li v-for="(img2, index) in list.down" :key="index">
-                    <a href="">
-                        <img v-lazy="img2">
-                    </a>
+                    <router-link :to="{name:img2.name}">
+                        <img v-lazy="img2.src">
+                    </router-link>
                 </li>
             </ul>
         </div>
-        <!-- <span class="sp"></span> -->
     </div>
 </template>
 
@@ -67,7 +66,7 @@ export default {
     .sp{
         display: block;
         width: 100%;
-        height: 5px;
+        height: 10px;
         background: #f6f6f6;
     }
 </style>

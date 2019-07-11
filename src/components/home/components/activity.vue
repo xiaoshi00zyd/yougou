@@ -4,7 +4,9 @@
             <img v-lazy="activitylist.img" class="img_1">
             <ul class="ul_1">
                 <li v-for="(activity,index) in activitylist.list" :key='index'>
-                    <img v-lazy='activity'>
+                    <router-link :to="{name: activity.name}">
+                        <img v-lazy='activity.src'>
+                    </router-link>
                 </li>
             </ul>
         </div>
@@ -37,9 +39,10 @@ export default {
         width: 100%;
         display: flex;
         flex-direction: row;
+        // padding-bottom: 20px;
         li{
             width: 30%;
-            margin-left: 15px;
+            margin-left: 30px;
             img{
                 width: 100%;
             }

@@ -1,7 +1,10 @@
 <template>
   <swiper :options="swiperOption">
     <swiper-slide v-for="(slide, index) in swiperSlides" :key="index">
-        <img :src='slide' alt='' class='pic'>
+      <router-link :to="{name: slide.name}">
+        <img :src='slide.img' alt='' class='pic'>
+      </router-link>
+        <!-- <router-link :to="slide.href" tag="img" class='pic' :src='slide.img' @click='test'></router-link> -->
     </swiper-slide>
     <div class="swiper-pagination" slot="pagination"></div>
   </swiper>
@@ -17,7 +20,7 @@ export default {
         pagination: {
           el: '.swiper-pagination'
         },
-        loop: true,
+        loop: false,
         autoplay: {
           delay: 2000,
           stopOnLastSlide: false,
@@ -30,34 +33,29 @@ export default {
   mounted () {
 
   },
+  methods: {
+    test () {
+      console.log(1)
+    }
+  },
   async created () {
     this.swiperSlides = await getHomeBanner()
   }
 }
 </script>
 <style>
-    /* .swiper-pagination{
-        display:flex;
-        justify-content:flex-end;
-        padding-right:10px;
-        box-sizing:border-box;
-    } */
-    /* .swiper-pagination-bullet{
-        border-radius:1px;
-        width:2px;
-        height:15px;
-        background:#666;
-        border:1px solid #666;
-        opacity:0.2;
-        transform:rotateZ(40deg);
-    } */
-
     .swiper-pagination-bullet-active{
         background:#fe0000;
         opacity:0.6;
     }
+    .swiper-pagination-bullet{
+      width: 10px;
+      height: 10px;
+    }
     .pic{
       width: 100%;
       vertical-align: bottom;
+      cursor: pointer;
+      z-index: 100;
     }
 </style>

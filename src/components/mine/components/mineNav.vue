@@ -26,24 +26,25 @@ export default {
     position: absolute;
     z-index: 9999;
     background: #F8F8F8;
-    height: 44px;
+    height: 88px;
     width: 100%;
     display: flex;
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 0 20px;
     /* 上下居中 */
     align-items: center;
-    border-bottom: 1px solid #E5E5E5;
+    border-bottom: 2px solid #E5E5E5;
 }
 
 .top img {
-    width: 26px;
-    height: 26px;
+    width: 52px;
+    height: 52px;
 }
 .top p {
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: 800;
+    font-size: 36px;
     width: 100%;
     text-align: center;
+    transform: translateX(-10px);
 }
 </style>
