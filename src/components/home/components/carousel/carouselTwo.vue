@@ -1,3 +1,4 @@
+/* eslint-disable vue/no-side-effects-in-computed-properties */
 <template>
     <div class="spbig">
       <!-- 标题搜索框 -->
@@ -7,7 +8,7 @@
        <!-- 商品列表操作 -->
        <div class="operation">
          <ul>
-           <li v-for="(item,index) in text" :key="index"  @click="selectStyle (index) " :class="{'textcolor':aindex===index}" >
+           <li v-for="(item,index) in text" :key="index"  @click="selectStyle (item,index) " :class="{'textcolor':aindex===index}" >
              {{item.wenben}}
              <img :src="item.img" v-if="item.img"/>
            </li>
@@ -17,9 +18,9 @@
        <!-- 具体商品列表 -->
        <div class="list">
           <ul>
-            <li v-for="item in list" :key="item.id">
+            <li v-for="item in sortItems" :key="item.id">
                 <img :src="item.img" alt="">
-                <span>{{item.title}}</span>
+                <span>{{item.txt}}</span>
                 <p class="jiaqian">
                   <span class="price">{{item.price}}</span>
                   <span :class="['yuanjia',item.judge? 'yuanjia_xiahua':'']" >
@@ -43,13 +44,14 @@
 </template>
 
 <script>
-import {getCommodity} from '@/api'
+import {getHomeBanner} from '@/api'
 import Title from '@/public/title'
 import Hide from '@/public/hide'
 export default {
   data () {
     return {
       aindex: 0,
+      currentWenben: '综合',
       text: [
         {wenben: '综合'},
         {wenben: '销量'},
@@ -57,21 +59,55 @@ export default {
         {wenben: '新品'},
         {wenben: '筛选', img: '//i1.ygimg.cn/pics/mobile/appointment/searchP/select.png'}
       ],
-      list: [],
-      option: false
+      // list: [],
+      option: false,
+      arr: [],
+      num: null,
+      testList: [],
+      obj: []
+    }
+  },
+  computed: {
+    sortItems () {
+      let arr = []
+      arr = JSON.parse(JSON.stringify(this.obj))
+      if (this.currentWenben === '销量') {
+        return arr.sort((a, b) => {
+          return b.salesvolume - a.salesvolume
+        })
+      } else if (this.currentWenben === '综合') {
+        console.log('综合更新')
+        return arr
+      } else if (this.currentWenben === '价格') {
+        console.log('价格更新')
+        return arr.sort((a, b) => {
+          let abc = parseInt(a.price.substring(1))
+          let bcd = parseInt(b.price.substring(1))
+          return abc - bcd
+        })
+      }
+      return arr
     }
   },
   methods: {
-    selectStyle (index) {
+    selectStyle (item, index) {
+      // console.log(this.text[index].wenben)
       this.aindex = index
+      this.currentWenben = this.text[index].wenben
     },
     morea () {
       this.option = !this.option
     }
+
   },
   async created () {
-    this.list = await getCommodity()
-    console.log(this.list)
+    // this.list = await getCommodity()
+    this.num = this.$route.params.id
+    this.testList = await getHomeBanner()
+    console.log(this.testList)
+    this.obj = this.testList[2].Child.data
+    console.log(this.obj)
+    // console.log(Object.prototype.toString.call(this.obj.Child.data))
   },
   components: {
     Title,
