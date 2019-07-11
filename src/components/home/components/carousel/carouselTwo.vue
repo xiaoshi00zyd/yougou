@@ -64,7 +64,8 @@ export default {
       arr: [],
       num: null,
       testList: [],
-      obj: []
+      obj: [],
+      age: ''
     }
   },
   computed: {
@@ -103,11 +104,21 @@ export default {
   async created () {
     // this.list = await getCommodity()
     this.testList = await getHomeBanner()
-    if (this.$route.params.id) {
-      this.num = this.testList[this.$route.params.id]
-      this.obj = this.testList[this.$route.params.id].Child.data
+    this.age = this.$route.query.id
+    console.log(this.age)
+    if (!this.$route.query.id) {
+      // console.log(this.testList[1])
+      // for (let item in this.testList) {
+      //   if (this.testList[item].name === this.$route.path.substring(1)) {
+      //     this.age = this.testList[item].id
+      //   }
+      // }
+      console.log(this.age)
+      this.num = this.testList[this.age]
+      this.obj = this.testList[this.age].Child.data
     } else {
-      console.log(this.$route.path.substring(1))
+      this.num = this.testList[this.$route.query.id]
+      this.obj = this.testList[this.$route.query.id].Child.data
     }
 
     this.$store.dispatch('setTitleFn', this.num.title)
