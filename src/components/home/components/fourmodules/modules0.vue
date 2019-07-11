@@ -37,6 +37,11 @@
         </div>
         <ul class="signEight">
           <li v-for="(item,index) in sign" :key="index">{{item}}</li>
+          <li v-for="(item,index) in sign" :key="index">
+            <img src="" alt="">
+            <p></p>
+            <p></p>
+          </li>
         </ul>
         <ul class="signHotProUl clearfix"></ul>
         </div>
