@@ -18,7 +18,7 @@ export default {
   },
   async created () {
     this.bigList = await getHomeBanner()
-    this.list = this.bigList[this.$route.params.id]
+    this.list = this.bigList[this.$route.query.id]
     this.$store.dispatch('setTitleFn', this.list.title)
   }
 }

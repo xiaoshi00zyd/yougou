@@ -4,14 +4,14 @@
             <img v-lazy="list.img" class="img_1">
             <ul class="ul_1">
                 <li v-for="(img1, index) in list.up" :key="index">
-                    <router-link :to="{name:img1.name}">
+                    <router-link :to="{name:img1.name,query:{id: img1.id}}">
                         <img v-lazy="img1.src">
                     </router-link>
                 </li>
             </ul>
             <ul class="ul_2">
                 <li v-for="(img2, index) in list.down" :key="index">
-                    <router-link :to="{name:img2.name}">
+                    <router-link :to="{name:img2.name,query:{id: img2.id}}">
                         <img v-lazy="img2.src">
                     </router-link>
                 </li>

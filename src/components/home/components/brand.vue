@@ -2,13 +2,13 @@
     <div class="ms">
         <div class="mspro"  v-for="(HomeBaner,index) in HomeBanerList" :key="index">
             <img v-if="HomeBaner.brand.img" v-lazy='HomeBaner.brand.img'>
-            <router-link :to="{name: HomeBaner.sign.name}">
+            <router-link :to="{name: HomeBaner.sign.name,query:{id: HomeBaner.sign.id}}">
               <img v-lazy='HomeBaner.sign.img' class="pic_1">
             </router-link>
             <div class="box">
                 <ul class="product" ref="myul">
                     <li ref="myli" v-for="(product,index) in HomeBaner.product" :key="index" class="li_1">
-                      <router-link :to="{name: product.name}">
+                      <router-link :to="{name: product.name,query:{id: product.id}}">
                         <img v-lazy="product.oimg"/>
                         <a><p class="nprice">{{product.p}}</p></a>
                         <a><p class="oprice">{{product.span}}</p></a>

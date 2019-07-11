@@ -2,7 +2,7 @@
     <div>
         <ul class="ul_1" v-for="(singlist,index) in HomeSigninList[0]" :key="index">
             <li v-for="(sing,index) in singlist" :key="index">
-                <router-link :to="{name:sing.name}">
+                <router-link :to="{name:sing.name,query:{id: sing.id}}">
                     <img :src="sing.src" >
                 </router-link>
             </li>
