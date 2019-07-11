@@ -74,6 +74,10 @@ export function getDiscover () {
 export function getQingliangji () {
   return axios.get('qingliangji')
 }
+// 签到八个商品接口
+export function getSignList () {
+  return axios.get('signList')
+}
 // export function getCommodity () {
 //   return axios.get('productList')
 // }
