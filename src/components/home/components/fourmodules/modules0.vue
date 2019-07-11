@@ -30,26 +30,39 @@
         <li><em></em><span><b>+25</b></span><i>7.14</i></li>
       </ul>
     </div>
+    <div class="eight">
+      <div class="signSection">
+        <div class="signSectionTitle">
+          <a href="">热门商品推荐</a>
+        </div>
+        <ul class="signEight">
+          <li v-for="(item,index) in sign" :key="index">{{item}}</li>
+        </ul>
+        </div>
+    </div>
   </div>
 
 </template>
 
 <script>
 import Hide from '../../../../public/hide'
+import {getSignList} from '@/api'
 export default {
   props: {
 
   },
   data () {
     return {
-      fenone: false
+      fenone: false,
+      sign: []
     }
   },
   computed: {
 
   },
-  created () {
-
+  async created () {
+    this.sign = await getSignList()
+    console.log(this.sign)
   },
   mounted () {
 
@@ -72,6 +85,9 @@ export default {
 </script>
 
 <style scoped lang="less">
+.sign {
+  background: #EEEEEE;
+}
 .search1 {
     position: absolute;
     z-index: 9999;
@@ -227,6 +243,31 @@ export default {
     font-style: normal;
     padding-top: 10px;
     color:#5C5F68;
+  }
+}
+.eight {
+  background: #EEEEEE;
+  .signSection{
+    border:1px solid #e8e8e8;
+    background-color:#fff;
+    margin:20px 20px 0;
+  }
+  .signSectionW{
+    margin:0 16px 20px;
+  }
+  .signSectionTitle{
+    padding:0 24px;
+    position: relative;
+    border-bottom:1px solid #ddd;
+  }
+  .signSectionTitle a{
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    font-size: 28px;
+    color:#333;
+    background:url('https://m.yougou.com/images/memberCenter/open.png') right center no-repeat;
+    background-size:16px auto;
   }
 }
 </style>

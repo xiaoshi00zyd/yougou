@@ -66,3 +66,15 @@ export function getChild () {
 export function getDiscover () {
   return axios.get('discover')
 }
+// 商品列表
+export function getCommodity () {
+  return axios.get('productList')
+}
+// 清凉季接口
+export function getQingliangji () {
+  return axios.get('qingliangji')
+}
+// 签到八个商品接口
+export function getSignList () {
+  return axios.get('http://127.0.0.1:3000/api/signList')
+}
