@@ -67,6 +67,6 @@ export function getDiscover () {
   return axios.get('discover')
 }
 // 商品列表
-export function getCommodity () {
-  return axios.get('productList')
-}
+// export function getCommodity () {
+//   return axios.get('productList')
+// }
