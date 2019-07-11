@@ -4,7 +4,7 @@
       <!-- 标题搜索框 -->
       <Title  @more='morea'></Title>
       <div class="pudian"></div>
-      <Hide :hide='option' style="position: absolute"></Hide>
+      <Hide :hide='option' ></Hide>
        <!-- 商品列表操作 -->
        <div class="operation">
          <ul>
@@ -128,6 +128,9 @@ export default {
   .pudian{
     height: 90px;
   }
+  .search{
+    position: absolute;
+  }
    .operation{
       width: 100%;
       height: 100%;
@@ -143,6 +146,7 @@ export default {
           width: 24%;
           height: 84px;
           color: #999;
+          cursor: pointer;
           img{
                 vertical-align: middle;
                 width: 16px;
