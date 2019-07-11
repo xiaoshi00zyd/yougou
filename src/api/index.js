@@ -90,3 +90,8 @@ export function getcustomization () {
 // export function getcustomization () {
 //   return axios.get('customization')
 // }
+
+// 领券接口
+export function getTicket () {
+  return axios.get('http://127.0.0.1:3000/api/ticket')
+}
