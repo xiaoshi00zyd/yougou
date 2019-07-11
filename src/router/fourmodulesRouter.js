@@ -23,7 +23,7 @@ export default [
     path: '/modules2',
     component: () => import('../components/mine/mine.vue'),
     meta: {
-      title: '',
+      title: '登录',
       cache: false
     }
   },
