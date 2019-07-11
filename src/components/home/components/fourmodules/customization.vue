@@ -1,5 +1,5 @@
 <template>
-    <div class="box">
+    <div class="box" v-if="list!=null">
       <!-- 轮播 -->
       <div>
           <swiper :options="swiperOption">
@@ -75,7 +75,7 @@ export default {
           disableOnInteraction: true
         }
       },
-      list: []
+      list: null
     }
   },
   computed: {
