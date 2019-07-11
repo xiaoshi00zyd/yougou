@@ -14,17 +14,20 @@
            </li>
          </ul>
        </div>
-
+        <!-- banner图 -->
+        <div class="banner">
+            <img :src="banner" alt="" v-show="this.banner">
+        </div>
        <!-- 具体商品列表 -->
        <div class="list">
           <ul>
             <li v-for="item in sortItems" :key="item.id">
-                <img :src="item.src" alt="">
+                <img v-lazy="item.src" alt="">
                 <span>{{item.txt}}</span>
                 <p class="jiaqian">
-                  <span class="price">￥{{item.price}}</span>
+                  <span class="price">{{item.price}}</span>
                   <span :class="['yuanjia',item.judge? 'yuanjia_xiahua':'']" >
-                    ￥{{item.yuanjia}}
+                    {{item.yuanjia}}
                     <img src="../../imgs/plus-small.png" v-if="item.plus">
                   </span>
                   <span class="ticketIcon"></span>
@@ -65,7 +68,8 @@ export default {
       num: null,
       testList: [],
       obj: [],
-      age: ''
+      age: '',
+      banner: ''
     }
   },
   computed: {
@@ -82,8 +86,8 @@ export default {
       } else if (this.currentWenben === '价格') {
         // console.log('价格更新')
         return arr.sort((a, b) => {
-          let abc = a.price
-          let bcd = b.price
+          let abc = parseInt(a.price.substring(1))
+          let bcd = parseInt(b.price.substring(1))
           return abc - bcd
         })
       }
@@ -103,14 +107,15 @@ export default {
   },
   async created () {
     this.testList = await getHomeSignin()
-    // console.log(this.testList[0].clearSale[this.$route.query.id].Child.data)
+    this.banner = this.testList[0].selection[this.$route.query.id].Child.banner
+    // console.log(this.testList[0].clearSale[this.$route.query.id].Child.banner)
     this.age = this.$route.query.id
     if (!this.$route.query.id) {
-      this.num = this.testList[0].clearSale[this.age]
-      this.obj = this.testList[0].clearSale[this.age].Child.data
+      this.num = this.testList[0].selection[this.age]
+      this.obj = this.testList[0].selection[this.age].Child.data
     } else {
-      this.num = this.testList[0].clearSale[this.$route.query.id]
-      this.obj = this.testList[0].clearSale[this.$route.query.id].Child.data
+      this.num = this.testList[0].selection[this.$route.query.id]
+      this.obj = this.testList[0].selection[this.$route.query.id].Child.data
     }
 
     this.$store.dispatch('setTitleFn', this.num.title)
@@ -130,6 +135,10 @@ export default {
   }
   .search{
     position: absolute;
+  }
+  .banner img{
+      width: 100%;
+      height: 100%;
   }
    .operation{
       width: 100%;

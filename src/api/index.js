@@ -86,10 +86,6 @@ export function getSignList () {
 export function getcustomization () {
   return axios.get('customization')
 }
-// //罗威 凉鞋精选四大块
-// export function getcustomization () {
-//   return axios.get('customization')
-// }
 
 // 领券接口
 export function getTicket () {
