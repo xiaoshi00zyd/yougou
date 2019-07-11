@@ -8,14 +8,14 @@ const store = new Vuex.Store({
     title: '首页'
   },
   mutations: {
-    setTitle(state,title){
+    setTitle (state, title) {
       state.title = title
-      document.title = title;
+      document.title = title
     }
   },
   actions: {
-    setTitleFn(context,title){
-      context.commit('setTitle',title)
+    setTitleFn (context, title) {
+      context.commit('setTitle', title)
     }
   },
   getters: {
