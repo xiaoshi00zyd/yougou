@@ -76,10 +76,10 @@ export default {
           return b.salesvolume - a.salesvolume
         })
       } else if (this.currentWenben === '综合') {
-        console.log('综合更新')
+        // console.log('综合更新')
         return arr
       } else if (this.currentWenben === '价格') {
-        console.log('价格更新')
+        // console.log('价格更新')
         return arr.sort((a, b) => {
           let abc = parseInt(a.price.substring(1))
           let bcd = parseInt(b.price.substring(1))
@@ -102,12 +102,15 @@ export default {
   },
   async created () {
     // this.list = await getCommodity()
-    this.num = this.$route.params.id
     this.testList = await getHomeBanner()
-    console.log(this.testList)
-    this.obj = this.testList[2].Child.data
-    console.log(this.obj)
-    // console.log(Object.prototype.toString.call(this.obj.Child.data))
+    if (this.$route.params.id) {
+      this.num = this.testList[this.$route.params.id]
+      this.obj = this.testList[this.$route.params.id].Child.data
+    } else {
+      console.log(this.$route.path.substring(1))
+    }
+
+    this.$store.dispatch('setTitleFn', this.num.title)
   },
   components: {
     Title,
