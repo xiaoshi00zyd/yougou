@@ -105,15 +105,7 @@ export default {
     // this.list = await getCommodity()
     this.testList = await getHomeBanner()
     this.age = this.$route.query.id
-    console.log(this.age)
     if (!this.$route.query.id) {
-      // console.log(this.testList[1])
-      // for (let item in this.testList) {
-      //   if (this.testList[item].name === this.$route.path.substring(1)) {
-      //     this.age = this.testList[item].id
-      //   }
-      // }
-      console.log(this.age)
       this.num = this.testList[this.age]
       this.obj = this.testList[this.age].Child.data
     } else {
