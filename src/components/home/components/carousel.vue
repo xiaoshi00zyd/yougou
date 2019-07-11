@@ -1,10 +1,9 @@
 <template>
   <swiper :options="swiperOption">
     <swiper-slide v-for="(slide, index) in swiperSlides" :key="index">
-      <router-link :to="{name: slide.name,params: {id: slide.id}}">
+      <router-link :to="{name: slide.name,query: {id: slide.id}}">
         <img :src='slide.img' alt='' class='pic'>
       </router-link>
-        <!-- <router-link :to="slide.href" tag="img" class='pic' :src='slide.img' @click='test'></router-link> -->
     </swiper-slide>
     <div class="swiper-pagination" slot="pagination"></div>
   </swiper>
