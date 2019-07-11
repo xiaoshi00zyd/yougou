@@ -19,7 +19,7 @@
        <div class="list">
           <ul>
             <li v-for="item in sortItems" :key="item.id">
-                <img :src="item.img" alt="">
+                <img v-lazy="item.img" alt="">
                 <span>{{item.txt}}</span>
                 <p class="jiaqian">
                   <span class="price">{{item.price}}</span>
