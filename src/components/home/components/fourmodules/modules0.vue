@@ -22,7 +22,7 @@
       <div class="signCount">
         <a href=""><span>签到</span>连续0天</a>
       </div>
-      <ul class="signDay clearfix">
+      <ul class="signDay clearfix" >
         <li><em></em><span><b>+5</b></span><i>7.10</i></li>
         <li><em></em><span><b>+10</b></span><i>7.11</i></li>
         <li><em></em><span><b>+15</b></span><i>7.12</i></li>
@@ -30,22 +30,30 @@
         <li><em></em><span><b>+25</b></span><i>7.14</i></li>
       </ul>
     </div>
+    <!-- 八个版块 -->
     <div class="eight">
       <div class="signSection">
         <div class="signSectionTitle">
           <a href="">热门商品推荐</a>
         </div>
-        <ul class="signEight">
-          <li v-for="(item,index) in sign" :key="index">{{item}}</li>
-          <li v-for="(item,index) in sign" :key="index">
-            <img src="" alt="">
-            <p></p>
-            <p></p>
-          </li>
-        </ul>
-        <ul class="signHotProUl clearfix"></ul>
+      </div>
+      <ul class="signEight" ref="myul">
+        <li v-for="(item,index) in sign" :key="index">
+          <img :src="item.img" alt="">
+          <p class="p1">{{item.content}}</p>
+          <p class="p2">{{item.price}}</p>
+        </li>
+      </ul>
+      <!-- 底部banner图 -->
+        <div class="signBanner">
+          <div class="signSectionTitle">
+            <a href="">专题推荐</a>
+          </div>
+          <img src="//i1.ygimg.cn/pics/mobile/homepage/2017/01/1484298604002.jpg" alt="">
         </div>
     </div>
+    <!-- 底部 -->
+    <HomeFoot></HomeFoot>
   </div>
 
 </template>
@@ -53,6 +61,7 @@
 <script>
 import Hide from '../../../../public/hide'
 import {getSignList} from '@/api'
+import HomeFoot from '../homefoot.vue'
 export default {
   props: {
 
@@ -85,7 +94,17 @@ export default {
     }
   },
   components: {
-    Hide
+    Hide,
+    HomeFoot
+  },
+  updated () {
+    // console.log(this.$refs.myul.children.length)
+    if (this.$refs.myul.children.length !== 9) {
+      let oLi = document.createElement('li')
+      oLi.style.backgroundColor = 'white'
+      oLi.style.width = '33.33333333%'
+      this.$refs.myul.appendChild(oLi)
+    }
   }
 }
 </script>
@@ -253,27 +272,76 @@ export default {
 }
 .eight {
   background: #EEEEEE;
+  // margin: 0 8px 10px;
+  margin:20px 20px 0;
   .signSection{
     border:1px solid #e8e8e8;
     background-color:#fff;
-    margin:20px 20px 0;
-  }
-  .signSectionW{
-    margin:0 16px 20px;
   }
   .signSectionTitle{
     padding:0 24px;
     position: relative;
     border-bottom:1px solid #ddd;
+    a{
+      display: block;
+      height: 80px;
+      line-height: 80px;
+      font-size: 28px;
+      color:#333;
+      background:url('https://m.yougou.com/images/memberCenter/open.png') right center no-repeat;
+      background-size:16px auto;
+    }
   }
-  .signSectionTitle a{
-    display: block;
-    height: 80px;
-    line-height: 80px;
-    font-size: 28px;
-    color:#333;
-    background:url('https://m.yougou.com/images/memberCenter/open.png') right center no-repeat;
-    background-size:16px auto;
+  .signEight {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background: #EEEEEE;
+    li {
+      width: calc(100%/3);
+      text-align: center;
+      padding: 4px;
+      box-sizing: border-box;
+      border-right: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      background: white;
+      img {
+        display: block;
+        width: 100%;
+      }
+      .p1 {
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+      }
+      .p2 {
+        font-size: 12px;
+        font-weight: bold;
+        color:#ff0000;
+      }
+    }
+  }
+  .signBanner{
+    border:1px solid #e8e8e8;
+    background-color:#fff;
+    .signSectionTitle{
+      padding:0 24px;
+      position: relative;
+      border-bottom:1px solid #ddd;
+      a{
+        display: block;
+        height: 80px;
+        line-height: 80px;
+        font-size: 28px;
+        color:#333;
+        background:url('https://m.yougou.com/images/memberCenter/open.png') right center no-repeat;
+        background-size:16px auto;
+      }
+    }
+    img {
+      width:100%;
+    }
   }
 }
 </style>

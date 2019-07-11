@@ -76,7 +76,7 @@ export function getQingliangji () {
 }
 // 签到八个商品接口
 export function getSignList () {
-  return axios.get('http://127.0.0.1:3000/api/signList')
+  return axios.get('signList')
 }
 // export function getCommodity () {
 //   return axios.get('productList')
