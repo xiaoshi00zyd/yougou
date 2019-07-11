@@ -38,6 +38,7 @@
         <ul class="signEight">
           <li v-for="(item,index) in sign" :key="index">{{item}}</li>
         </ul>
+        <ul class="signHotProUl clearfix"></ul>
         </div>
     </div>
   </div>

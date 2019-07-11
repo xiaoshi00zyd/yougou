@@ -1,7 +1,7 @@
 <template>
   <swiper :options="swiperOption">
     <swiper-slide v-for="(slide, index) in swiperSlides" :key="index">
-      <router-link :to="{name: slide.name}">
+      <router-link :to="{name: slide.name,params: {id: slide.id}}">
         <img :src='slide.img' alt='' class='pic'>
       </router-link>
         <!-- <router-link :to="slide.href" tag="img" class='pic' :src='slide.img' @click='test'></router-link> -->

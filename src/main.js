@@ -16,11 +16,6 @@ Vue.config.productionTip = false
 
 Vue.use(VueAwesomeSwiper)
 
-router.beforeEach((to, from, next) => {
-  document.title = to.meta.title
-  next()
-})
-
 Vue.use(VueLazyload, {
   preLoad: 1.3,
   error: 'static/error.png',
@@ -35,4 +30,9 @@ new Vue({
   store,
   components: { App },
   template: '<App/>'
+})
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title
+  next()
 })
