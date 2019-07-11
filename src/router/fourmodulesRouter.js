@@ -23,13 +23,13 @@ export default [
     path: '/modules2',
     component: () => import('../components/mine/mine.vue'),
     meta: {
-      title: '',
+      title: '登录',
       cache: false
     }
   },
   {
-    name: 'customization',
-    path: '/customization',
+    name: 'modules3',
+    path: '/modules3',
     component: () => import('../components/home/components/fourmodules/customization.vue'),
     meta: {
       title: '定制',
@@ -39,37 +39,11 @@ export default [
   {
     name: 'winnow',
     path: '/winnow',
-    component: () => import('../components/home/components/fourmodules/winnow.vue'),
-    meta: {
-      title: '清凉季 夏凉精选',
-      cache: false
-    }
+    component: () => import('../components/home/components/fourmodules/winnow.vue')
   },
   {
     name: 'winnow0',
     path: '/winnow0',
-    component: () => import('../components/home/components/fourmodules/winnow0.vue'),
-    meta: {
-      title: '清凉季 断码清仓',
-      cache: false
-    }
-  },
-  {
-    name: 'winnow1',
-    path: '/winnow1',
-    component: () => import('../components/home/components/fourmodules/winnow1.vue'),
-    meta: {
-      title: '清凉季 平底凉鞋',
-      cache: false
-    }
-  },
-  {
-    name: 'winnow2',
-    path: '/winnow2',
-    component: () => import('../components/home/components/fourmodules/winnow2.vue'),
-    meta: {
-      title: '清凉季 阿迪5折封顶',
-      cache: false
-    }
+    component: () => import('../components/home/components/fourmodules/winnow0.vue')
   }
 ]

@@ -3,7 +3,7 @@
         <div v-if="this.showNum=='0'&&!this.showList">
             <ul class="ul_2">
                 <li v-for="(list,index) in recommend.list" :key="index">
-                    <router-link :to="{name: list.name}">
+                    <router-link :to="{name: list.name,query:{id: list.id}}">
                         <img v-lazy="list.img">
                         <p>￥{{list.price}}</p>
                     </router-link>
@@ -13,7 +13,7 @@
         <div v-if="this.showNum=='1'&&!this.showList">
             <ul class="ul_2">
                 <li v-for="(list,index) in recommend.list" :key="index">
-                    <router-link :to="{name: list.name}">
+                    <router-link :to="{name: list.name,query:{id: list.id}}">
                         <img v-lazy="list.img">
                         <p>￥{{list.price}}</p>
                     </router-link>
@@ -23,7 +23,7 @@
         <div v-if="this.showNum=='2'&&!this.showList">
             <ul class="ul_2">
                 <li v-for="(list,index) in recommend.list" :key="index">
-                    <router-link :to="{name: list.name}">
+                    <router-link :to="{name: list.name,query:{id: list.id}}">
                         <img v-lazy="list.img">
                         <p>￥{{list.price}}</p>
                     </router-link>
@@ -33,7 +33,7 @@
         <div v-if="this.showList">
             <ul class="ul_2">
                 <li v-for="(list,index) in recommend4.list" :key="index">
-                    <router-link :to="{name: list.name}">
+                    <router-link :to="{name: list.name,query:{id: list.id}}">
                         <img v-lazy="list.img">
                         <p>￥{{list.price}}</p>
                     </router-link>
@@ -75,12 +75,16 @@ export default {
         flex-direction: row;
         flex-wrap: wrap;
         li{
+            a:hover{
+                text-decoration: none;
+            }
             width: 25%;
             text-align: center;
             img{
                 width: 80%;
             }
             p{
+                color: #000;
                 font-size: 24px;
             }
         }
