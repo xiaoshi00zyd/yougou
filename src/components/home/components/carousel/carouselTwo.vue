@@ -20,7 +20,7 @@
           <ul>
             <li v-for="item in sortItems" :key="item.id">
                 <img v-lazy="item.img" alt="">
-                <span>{{item.txt}}</span>
+                <span>{{item.txt | ellipsis}}</span>
                 <p class="jiaqian">
                   <span class="price">{{item.price}}</span>
                   <span :class="['yuanjia',item.judge? 'yuanjia_xiahua':'']" >
@@ -118,6 +118,15 @@ export default {
   components: {
     Title,
     Hide
+  },
+  filters: {
+    ellipsis (value) {
+      if (!value) return ''
+      if (value.length > 32) {
+        return value.slice(0, 38) + '...'
+      }
+      return value
+    }
   }
 }
 </script>

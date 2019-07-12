@@ -20,7 +20,7 @@
                         <b>{{item.spanb}}</b>
                     </p>
                     <p class="right">
-                        <strong>{{item.strong}}</strong>
+                        <strong>{{item.strong | ellipsis}}</strong>
                         <time>{{item.time}}</time>
                         <a href="">20积分兑换</a>
                     </p>
@@ -54,6 +54,15 @@ export default {
   },
   async created () {
     this.ticket = await getTicket()
+  },
+  filters: {
+    ellipsis (value) {
+      if (!value) return ''
+      if (value.length > 32) {
+        return value.slice(0, 38) + '...'
+      }
+      return value
+    }
   }
 }
 </script>
