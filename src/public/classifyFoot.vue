@@ -36,7 +36,6 @@ export default {
         '思加图',
         '天美意'
       ]
-      
     }
   },
   computed: {
