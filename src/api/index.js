@@ -91,3 +91,8 @@ export function getcustomization () {
 export function getTicket () {
   return axios.get('ticket')
 }
+
+// 发现第二个数据接口
+export function getFaxian2 () {
+  return axios.get('faxian2')
+}

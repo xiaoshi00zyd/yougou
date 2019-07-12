@@ -12,5 +12,10 @@ export default [
     name: 'carouselTwo',
     path: '/carouselTwo',
     component: () => import('../components/home/components/carousel/carouselTwo.vue')
+  },
+  {
+    name: 'disChild1',
+    path: '/disChild1',
+    component: () => import('../components/find/components/faxian2.vue')
   }
 ]
