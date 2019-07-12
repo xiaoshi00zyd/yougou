@@ -89,5 +89,5 @@ export function getcustomization () {
 
 // 领券接口
 export function getTicket () {
-  return axios.get('http://127.0.0.1:3000/api/ticket')
+  return axios.get('ticket')
 }

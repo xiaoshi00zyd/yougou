@@ -177,7 +177,7 @@ export default {
         padding: 0px 12px;
         height: 32px;
         line-height: 32px;
-        border: 1px solid;
+        border: 2px solid;
         border-radius: 30px;
         position: absolute;
         right: 32px;
