@@ -19,7 +19,7 @@ Vue.use(VueAwesomeSwiper)
 Vue.use(VueLazyload, {
   preLoad: 1.3,
   error: 'static/error.png',
-  loading: 'static/loading.gif',
+  loading: 'static/zhanwei.png',
   attempt: 1
 })
 
@@ -33,6 +33,6 @@ new Vue({
 })
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title
+  document.title = to.meta.title || ''
   next()
 })

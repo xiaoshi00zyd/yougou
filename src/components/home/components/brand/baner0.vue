@@ -14,17 +14,20 @@
            </li>
          </ul>
        </div>
-
+        <!-- banner图 -->
+        <div class="banner">
+            <img :src="banner" alt="" v-show="this.banner">
+        </div>
        <!-- 具体商品列表 -->
        <div class="list">
           <ul>
             <li v-for="item in sortItems" :key="item.id">
-                <img v-lazy="item.img" alt="">
-                <span>{{item.txt | ellipsis}}</span>
+                <img v-lazy="item.src" alt="">
+                <span>{{item.txt}}</span>
                 <p class="jiaqian">
-                  <span class="price">{{item.price}}</span>
+                  <span class="price">￥{{item.price}}</span>
                   <span :class="['yuanjia',item.judge? 'yuanjia_xiahua':'']" >
-                    {{item.yuanjia}}
+                    ￥{{item.yuanjia}}
                     <img src="../../imgs/plus-small.png" v-if="item.plus">
                   </span>
                   <span class="ticketIcon"></span>
@@ -44,7 +47,7 @@
 </template>
 
 <script>
-import {getHomeBanner} from '@/api'
+import {getHomeBaner} from '@/api'
 import Title from '@/public/title'
 import Hide from '@/public/hide'
 export default {
@@ -65,7 +68,8 @@ export default {
       num: null,
       testList: [],
       obj: [],
-      age: ''
+      age: '',
+      banner: ''
     }
   },
   computed: {
@@ -82,8 +86,8 @@ export default {
       } else if (this.currentWenben === '价格') {
         // console.log('价格更新')
         return arr.sort((a, b) => {
-          let abc = parseInt(a.price.substring(1))
-          let bcd = parseInt(b.price.substring(1))
+          let abc = a.price
+          let bcd = b.price
           return abc - bcd
         })
       }
@@ -102,31 +106,21 @@ export default {
 
   },
   async created () {
-    // this.list = await getCommodity()
-    this.testList = await getHomeBanner()
+    this.testList = await getHomeBaner()
+    this.banner = this.testList[this.$route.query.id].sign.Child.banner
     this.age = this.$route.query.id
     if (!this.$route.query.id) {
-      this.num = this.testList[this.age]
-      this.obj = this.testList[this.age].Child.data
+      this.num = this.testList[this.age].sign
+      this.obj = this.testList[this.age].sign.Child.data
     } else {
-      this.num = this.testList[this.$route.query.id]
-      this.obj = this.testList[this.$route.query.id].Child.data
+      this.num = this.testList[this.$route.query.id].sign
+      this.obj = this.testList[this.$route.query.id].sign.Child.data
     }
-
     this.$store.dispatch('setTitleFn', this.num.title)
   },
   components: {
     Title,
     Hide
-  },
-  filters: {
-    ellipsis (value) {
-      if (!value) return ''
-      if (value.length > 32) {
-        return value.slice(0, 38) + '...'
-      }
-      return value
-    }
   }
 }
 </script>
@@ -139,6 +133,10 @@ export default {
   }
   .search{
     position: absolute;
+  }
+  .banner img{
+      width: 100%;
+      height: 100%;
   }
    .operation{
       width: 100%;

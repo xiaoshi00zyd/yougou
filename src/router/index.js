@@ -14,6 +14,9 @@ import fourmodules from './fourmodulesRouter.js'
 import hot from './hotRouter.js'
 // 限时秒杀
 import seckill from './seckillRouter.js'
+import activity from './activityRouter.js'
+import brand from './brandRouter.js'
+import recommend from './recommendRouter.js'
 
 Vue.use(Router)
 
@@ -76,6 +79,9 @@ export default new Router({
     ...classifyFoot,
     ...fourmodules,
     ...hot,
-    ...seckill
+    ...seckill,
+    ...activity,
+    ...brand,
+    ...recommend
   ]
 })
