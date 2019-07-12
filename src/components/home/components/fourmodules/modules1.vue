@@ -55,6 +55,7 @@ export default {
   async created () {
     this.ticket = await getTicket()
   },
+  //   文字多余变成省略号
   filters: {
     ellipsis (value) {
       if (!value) return ''
