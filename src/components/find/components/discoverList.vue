@@ -7,7 +7,7 @@
                 </div>
             </div>
         </div>
-        <div v-for="(item,id) in faxianlist" :key="id" class="one">
+        <router-link tag="div" :to='item.name' v-for="(item,id) in faxianlist" :key="id" class="one" >
             <dl>
                 <a href="">
                     <dt>{{item.title}}</dt>
@@ -17,7 +17,7 @@
                     <dd class="introduce">{{item.bottom_introduce}}</dd>
                 </a>
             </dl>
-        </div>
+        </router-link>
     </div>
 </template>
 
@@ -106,7 +106,17 @@ export default {
 .one img {
     display: block;
     width: 100%;
-    margin: auto
+    margin: auto;
+    text-decoration: none;
+}
+.one dl a:hover{
+    text-decoration: none;
+}
+.one dl a:active{
+    text-decoration: none;
+}
+.one dl a:visited{
+    text-decoration: none;
 }
 .one dt {
     font-size: 28px;
